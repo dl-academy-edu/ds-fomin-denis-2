@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Design Life Kids</title>
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../static/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    @@include('header/index.html')
+    <main class="container">
+        <h1 class="title">Contact Us</h1>
+        <div class="breadcrumb">
+                <a class="breadcrumb_link" href="index.html">Home</a>
+                <img class="breadcrumb_img" src="../../static/images/button/stroke.svg" alt="stroke" width="8" height="12">
+                <p class="breadcrumb_text">Contact Us</p>
+        </div>
+        <div class="contact">
+            <form action="/contact" method="POST" class="contact_form">
+                <fieldset>
+                    <div class="label_wrapper">
+                        <label for="field_name" class="form_label">Name</label>
+                        <input id="field_name" class="form_input" type="text" name="user_name" placeholder="Ivan Ivanov">
+                    </div>
+                </fieldset>
+                <fieldset class="form_2_column">
+                    <div class="label_wrapper two_column">
+                        <label for="field_phone" class="form_label">Phone</label>
+                        <input id="field_phone" type="number" name="user_phone">
+                    </div>
+                    <div class="label_wrapper two_column">
+                        <label for="field_email" class="form_label">Email</label>
+                        <input id="field_email" type="email" name="user_email">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="label_wrapper">
+                        <label for="field_message" class="form_label">Message</label>
+                        <textarea id="field_message" name="user_message"></textarea>
+                    </div>                   
+                </fieldset>
+                <fieldset>
+                    <div class="label_wrapper">
+                        <input id="check_input" type="checkbox" class="form_checkbox_input" checked>
+                        <label for="check_input" class="form_checkbox_label">By clicking on the button, you consent to the processing of your personal data</label>
+                    </div>
+                </fieldset>
+                <button class="button" type="submit">Submit</button>
+            </form>
+            <article class="support">
+                <h2 class="hidden">Support</h2>
+                <p class="support_text">Our support team are on-hand to assist with any issues you are experiencing.</p>
+                <p class="support_text">Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
+                <p class="support_wrapper">An expert is waiting to help you!</p>
+            </article>
+        </div>
+    </main>    
+    @@include('footer/index.html')
+</body>
+</html>

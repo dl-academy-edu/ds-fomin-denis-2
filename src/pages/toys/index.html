@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toys</title>
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../static/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    @@include('header/index.html')
+    <main>
+        <section class="container">
+            <h1 class="title">Toy for kids</h1>
+            <div class="breadcrumb">
+                <a class="breadcrumb_link" href="index.html">Home</a>
+                <img class="breadcrumb_img" src="../../static/images/button/stroke.svg" alt="stroke" width="8" height="12">
+                <a class="breadcrumb_link" href="catalog.html">Catalog</a>
+                <img class="breadcrumb_img" src="../../static/images/button/stroke.svg" alt="stroke" width="8" height="12">
+                <p class="breadcrumb_text">Toys</p>
+            </div>  
+        </section>
+        <section class="toys_sidebar">
+            <h2 class="hidden">Toys</h2>
+            <div class="sidebar">
+                <form action="/" name="sidebar" class="sidebar_form container">
+                    <fieldset class="cost">
+                        <legend>Cost</legend>
+                        <div class="sidebar_cost_wrapper">
+                            <input id="sidebar_cost" type="range" name="cost_range" min="0" max="500" step="1" class="sidebar_input_cost">
+                            <label for="sidebar_cost" class="sidebar_label_cost">
+                                <div class="cost_slide_number">
+                                    <p>0</p>
+                                    <p>500</p>
+                                </div> 
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="color">
+                        <legend>Color</legend>
+                        <ul class="dots_none form_list">
+                            <li class="form_item">
+                                <input id="color_black" type="checkbox" name="black"  class="sidebar_input_check" checked>
+                                <label for="color_black" class="sidebar_label_check" tabindex="0">Black</label>
+                            </li>
+                            <li class="form_item">
+                                <input id="color_blue" type="checkbox" name="blue" class="sidebar_input_check">
+                                <label for="color_blue" class="sidebar_label_check" tabindex="0">Blue</label>                             
+                            </li>
+                            <li class="form_item">
+                                <input id="color_green" type="checkbox" name="green" class="sidebar_input_check">
+                                <label for="color_green" class="sidebar_label_check" tabindex="0">Green</label>
+                            </li>
+                            <li class="form_item">
+                                <input id="color_white" type="checkbox" name="white" class="sidebar_input_check">
+                                <label for="color_white" class="sidebar_label_check" tabindex="0">White</label>                            
+                            </li>
+                        </ul>                                         
+                    </fieldset>
+                    <fieldset class="delivery">
+                        <legend>Delivery</legend>
+                        <ul class="dots_none form_list">
+                            <li class="form_item">
+                                <input id="free_radio" type="radio" name="shipping" class="sidebar_input_radio">
+                                <label for="free_radio" class="sidebar_label_radio" tabindex="0">Free shipping</label>
+                            </li>
+                            <li class="form_item">
+                                <input id="fast_radio" type="radio" name="shipping" class="sidebar_input_radio" checked>
+                                <label for="fast_radio" class="sidebar_label_radio" tabindex="0">Fast shipping</label>
+                            </li>
+                        </ul>                      
+                    </fieldset>
+                    <fieldset class="amount">
+                        <legend>Amount</legend>
+                        <div class="amount_item">
+                            <input id="radio_min" type="radio" name="amount" class="sidebar_input_amount" checked>
+                            <label for="radio_min" class="sidebar_label_amount" tabindex="0">
+                                <div class="amount_wrapper">0-5</div></label>
+                        </div>
+                        <div class="amount_item">
+                            <input id="radio_medium" type="radio" name="amount" class="sidebar_input_amount">
+                            <label for="radio_medium" class="sidebar_label_amount" tabindex="0">10-20</label>
+                        </div>
+                        <div class="amount_item">
+                            <input id="radio_max" type="radio" name="amount" class="sidebar_input_amount">
+                            <label for="radio_max" class="sidebar_label_amount" tabindex="0">20-50</label>                        
+                        </div>
+                    </fieldset>
+                    <button class="button sidebar_btn" type="submit">APPLY</button>
+                </form>
+            </div>
+        </section>
+        <section class="catalog container">
+            <h2 class="hidden">Catalog</h2>
+            <ul class="catalog_list dots_none">
+                @@include('catalog/index.html', {
+                    "href":"#",
+                    "img":"../../static/images/catalog/catalog1.png",
+                    "alt":"Sharky Bag",
+                    "width":"380",
+                    "height":"385",
+                    "text":"Learn More",
+                    "title":"Sharky Bean Bag Chair Cover",
+                    "price":"$60.00 USD"
+                })
+                @@include('catalog/index.html', {
+                    "href":"#",
+                    "img":"../../static/images/catalog/catalog2.png",
+                    "alt":"Brass Frames",
+                    "width":"380",
+                    "height":"385",
+                    "text":"Learn More",
+                    "title":"Brass Deco Frames",
+                    "price":"$66.00 USD"
+                })
+                @@include('catalog/index.html', {
+                    "href":"#",
+                    "img":"../../static/images/catalog/catalog3.png",
+                    "alt":"Apron",
+                    "width":"380",
+                    "height":"385",
+                    "text":"Learn More",
+                    "title":"Cibo Full Apron",
+                    "price":"$60.00 USD"
+                })
+                @@include('catalog/index.html', {
+                    "href":"#",
+                    "img":"../../static/images/catalog/catalog4.png",
+                    "alt":"Gumball Machine",
+                    "width":"380",
+                    "height":"385",
+                    "text":"Learn More",
+                    "title":"Gatcha Gatcha Gumball Machine",
+                    "price":"$56.00 USD"
+                })
+                @@include('catalog/index.html', {
+                    "href":"#",
+                    "img":"../../static/images/catalog/catalog5.png",
+                    "alt":"Christmas Candle",
+                    "width":"380",
+                    "height":"385",
+                    "text":"Learn More",
+                    "title":"Christmas Advent Scented Candle",
+                    "price":"$29.00 USD"
+                })
+                @@include('catalog/index.html', {
+                    "href":"#",
+                    "img":"../../static/images/catalog/catalog6.png",
+                    "alt":"Tea Light",
+                    "width":"380",
+                    "height":"382",
+                    "text":"Learn More",
+                    "title":"Tangle Spinning Tea Light",
+                    "price":"$56.00 USD"
+                })
+            </ul>
+            @@include('pagination/index.html')
+        </section>
+    </main>
+    @@include('footer/index.html')
+</body>
+</html>

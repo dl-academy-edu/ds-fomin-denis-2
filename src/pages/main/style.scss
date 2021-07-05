@@ -1,0 +1,345 @@
+/* Banner */
+
+.banner {
+  -webkit-display: flex;
+      -moz-display: flex;
+          display: flex;
+  position: relative;
+  background: #EEE4DB;    
+  margin-top: 129px;
+  margin-bottom: 90px;
+}
+.banner_slider {
+  -webkit-display: flex;
+      -moz-display: flex;
+          display: flex;
+  -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+          flex-direction: column;
+  padding-top: 17px;
+  padding-left: 28px;
+  margin-right: 44px;
+}
+
+.number_slider {
+  font-family: "Montserrat", "Arial Narrow", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 73px;
+  margin: 0;
+  margin-bottom: 10px;
+  border: none;
+  color: rgba(30, 6, 6, 0.05);
+  
+}
+
+.button_slider {
+  -webkit-display: flex;
+      -moz-display: flex;
+          display: flex;
+  -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2px;
+  margin-top: 3px;
+}
+
+.button_active{
+  width: 31px;
+  height: 3px;
+  border: none;
+  background: rgba(30, 6, 6, 0.6);
+  cursor: pointer;
+}
+
+.button_passive{
+  width: 31px;
+  height: 3px;  
+  margin-top: 11px;
+  border: none;
+  background: #D6CAC2;
+  cursor: pointer;
+}
+
+.button_passive:hover {
+  background: #725F5B;
+}
+
+.banner_text {
+  z-index: 1;
+}
+
+.banner_title {
+  width: 53%;
+  margin-top: 92px;
+  margin-bottom: 20px;
+}
+
+.banner_p {
+  font-family: "Crimson Text", "Georgia", serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 20px;
+  color: #1E0606;
+}
+
+.banner_btn {
+  margin-bottom: 89px;
+}
+
+.banner_link {
+  -webkit-display: flex;
+      -moz-display: flex;
+          display: flex;
+  -webkit-justify-content: center;
+      -moz-justify-content: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -moz-align-items: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #C29974;
+  position: absolute;
+  padding: 11px;
+  left: 0px;
+}
+
+.monster {
+  position: absolute;
+  top: -89px;
+  right: 100px;
+}
+
+/* Category */
+
+.category_list {
+  -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+            justify-content: space-between;
+}
+
+.category_slide {
+  -webkit-display: flex;
+      -moz-display: flex;
+          display: flex;
+  -webkit-align-items: center;
+      -moz-align-items: center;
+          align-items: center;
+  margin-top: 13px;
+  margin-bottom: 80px;
+}
+
+.button_category {
+  width: 37px;
+  height: 37px;
+  padding: 5px 12px;
+  margin-right: 4px;
+  border: none;
+  background: #E2F1F8;    
+}
+
+.category_info {
+ margin-left: 20px;
+ margin-right: 535px;
+}
+
+/* Delivery */
+
+.delivery {
+  -webkit-display: flex;
+      -moz-display: flex;
+          display: flex;
+}
+
+.delivery_img {
+  background-color: #C7DFEB;
+}
+
+.delivery_wrapper {
+  position: relative;
+  padding-left: 121px;
+}
+
+.delivery_title {
+  margin-top: 30px;
+  margin-bottom: 6px;
+}
+
+.delivery_list {
+  margin-top: 6px;
+  margin-bottom: 30px;
+}
+
+.delivery_item {
+  font-family: "Crimson Text", "Georgia", serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 32px;
+  margin-top: 22px;
+  color: #1E0606;
+}
+
+.wrapper_item {
+  margin-top: 17px;
+  font-weight: bold;
+}
+
+.wrapper_item::before{
+  content: ' ';
+  position: absolute;
+  width: 326px;
+  height: 55px;
+  top: 79px;
+  left: 60px;
+  background: rgba(112, 187, 220, 0.2);
+  z-index: -1;
+} 
+
+.delivery_text {
+  max-width: 480px;
+  width: 98%;
+  margin-bottom: 26px;
+}
+
+/* Brands */
+
+.brands_list {
+  -webkit-display: flex;
+      -moz-display: flex;
+          display: flex;
+  -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-top: 91px;
+  margin-bottom: 113px;
+}
+
+/* About Us */
+
+.contacts {
+  -webkit-display: flex;
+      -moz-display: flex;
+          display: flex;
+  -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -moz-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+          justify-content: space-between;
+  margin-bottom: -3px;
+}
+
+.about {
+  position: relative;
+  background-color: #E0F0F7;
+  padding: 31px 30px 35px 30px;
+  margin: 0;
+  margin-bottom: 155px;
+  margin-right: 57px;
+}
+
+.about_title {
+  position: absolute;
+  left: 0px;
+  top: -26px;
+  margin: 0;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.about_text {
+  font-family: "Crimson Text", "Georgia", serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 32px;
+  margin: 0;
+  margin-bottom: -10px;
+}
+
+article .button {
+  margin-top: 20px;
+}
+
+/* Map */
+
+.map {
+  position: relative;
+  background-color: #E0F0F7;
+  padding: 31px 30px 35px 30px;
+  margin: 0;
+  margin-bottom: 175px;
+  margin-right: 37px;
+}
+
+.map_title {
+  position: absolute;
+  left: 0px;
+  top: -26px;
+  margin: 0;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.map_text {
+margin-bottom: 20px;
+margin-top: 10px;
+}
+
+.map_frame {
+  position: absolute;
+  border: none;
+}
+
+/* Popup */
+
+.popup_overlay {
+  width: 100%;
+  height: 100vh;
+  background: #97ACE1;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+}
+
+.popup_form {
+  position: fixed;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 680px;
+  z-index: 2;
+  display: none;
+}
+
+.popup_open,
+.popup_overlay_open {
+  display: block;
+}
+
+.popup_close {
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  right: -32px;
+  top: -1px;
+}

@@ -1,80 +1,66 @@
-/* Header */
 
 .header {
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
-  -webkit-align-items: center;
-      -moz-align-items: center;
-          align-items: center;
-  -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-          justify-content: space-between;
-  margin-top: 50px;
-  margin-bottom: 40px;
-}
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    &__logo {
+        &:hover {
+        opacity: 0.5;
+        }
 
-.logo:hover,
-.nav_item:hover,
-.search_item:hover {
-  opacity: 0.5;
-}
+        &:active {
+        opacity: 0.2;
+        }
+    }
 
-.logo:active,
-.nav_item:active,
-.search_item:active {
-  opacity: 0.2;
-}
+    &__nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; 
+    }
 
-.menu {
-  width: 100%;
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
-  -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-          justify-content: space-between;
-}
+    &__list {
+        display: flex;
+        align-items: center;
+        margin-left: 59px;
+    }
 
-.nav_link {
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
-  -webkit-align-items: center;
-      -moz-align-items: center;
-          align-items: center;
-  margin-left: 59px;
-}
+    &__item {
+        @include font-size(14px,19px,normal);
+        text-transform: uppercase;
+        color: $text-color;  
+        margin-right: 20px;
+        &:hover {
+        opacity: 0.5;
+        }
 
-.nav_search {
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
-  -webkit-align-items: center;
-      -moz-align-items: center;
-          align-items: center;
-  margin-right: 2px;
-}
+        &:active {
+        opacity: 0.2;
+        }
+    }
+    
+    &__search {
+        @include font-size(14px,19px,bold);
+        text-transform: uppercase;
+        &:hover {
+        opacity: 0.5;
+        }
 
-.nav_item {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 19px;
-  text-transform: uppercase;
-  color: #1E0606;  
-  margin-right: 20px;  
-}
+        &:active {
+        opacity: 0.2;
+        }
+    }
 
-.button_search {
-  border: none;
-  background: none;
-  padding: 3px;
-}
+    &__button {
+        border: none;
+        background: none;
+        padding: 3px;
+        margin: 0;
+    }
 
-.header .header_contact {
-  font-size: 14px;
-  line-height: 19px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-left: 23px;
+    &__contact {
+        margin-left: 23px;
+    }
 }

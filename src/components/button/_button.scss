@@ -1,38 +1,22 @@
 .button {
-    height: 40px;
-    padding: 9px 22px;    
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 22px;
+    @include font-size(16px,22px,bold);
     text-transform: uppercase;
+    height: 40px;
+    padding: 9px 22px;
     border: none;
-    -webkit-display: flex;
-        -moz-display:flex;
-            display: flex;
-    -webkit-align-items: center;
-        -moz-align-items: center;
-            align-items: center;
-    -webkit-text-align: center;
-        -moz-text-align: center;
-            text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
     cursor: pointer;
-    color: #FFFFFF;
-    background: #000000;    
-  }
-  
-  .button:hover {
-    background: #C29974;
-  }
-  
-  .button:active {
-    background: #CFAF91;
-  }
-  
-  .button:disabled {
-    background: #C1C1C1;
-  }
-  
-  .popup_form .button {
-    color: #E1E1E1;
-    background: #C1C1C1; 
-  }
+    color: $white;
+    background: $button;
+    &:hover {
+        background: $button-hover;
+    }
+    &:active {
+        background: $button-active;
+    }
+    &:disabled {
+        background: $button-disabled;
+    }
+}

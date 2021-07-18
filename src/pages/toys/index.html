@@ -14,24 +14,23 @@
     <main>
         <section class="container">
             <h1 class="title">Toy for kids</h1>
-            <div class="breadcrumb">
-                <a class="breadcrumb_link" href="index.html">Home</a>
-                <img class="breadcrumb_img" src="../../static/images/button/stroke.svg" alt="stroke" width="8" height="12">
-                <a class="breadcrumb_link" href="catalog.html">Catalog</a>
-                <img class="breadcrumb_img" src="../../static/images/button/stroke.svg" alt="stroke" width="8" height="12">
-                <p class="breadcrumb_text">Toys</p>
-            </div>  
+            @@include('breadcrumb/index.html', {
+                "class-link":"breadcrumb__link",
+                "text-link":"Catalog",
+                "class-img":"breadcrumb__img",
+                "text":"Toys"
+            }) 
         </section>
-        <section class="toys_sidebar">
+        <section>
             <h2 class="hidden">Toys</h2>
             <div class="sidebar">
-                <form action="/" name="sidebar" class="sidebar_form container">
+                <form action="/" name="sidebar" class="sidebar__form container">
                     <fieldset class="cost">
                         <legend>Cost</legend>
-                        <div class="sidebar_cost_wrapper">
-                            <input id="sidebar_cost" type="range" name="cost_range" min="0" max="500" step="1" class="sidebar_input_cost">
-                            <label for="sidebar_cost" class="sidebar_label_cost">
-                                <div class="cost_slide_number">
+                        <div class="cost__wrapper">
+                            <input id="sidebar-cost" type="range" name="cost_range" min="0" max="500" step="1" class="cost__input">
+                            <label for="sidebar-cost">
+                                <div class="cost__slide-number">
                                     <p>0</p>
                                     <p>500</p>
                                 </div> 
@@ -40,61 +39,62 @@
                     </fieldset>
                     <fieldset class="color">
                         <legend>Color</legend>
-                        <ul class="dots_none form_list">
-                            <li class="form_item">
-                                <input id="color_black" type="checkbox" name="black"  class="sidebar_input_check" checked>
-                                <label for="color_black" class="sidebar_label_check" tabindex="0">Black</label>
+                        <ul class="dots_none color__list">
+                            <li class="color__item">
+                                <input id="color-black" type="checkbox" name="black"  class="color__input" checked>
+                                <label for="color-black" class="color__label" tabindex="0">Black</label>
                             </li>
-                            <li class="form_item">
-                                <input id="color_blue" type="checkbox" name="blue" class="sidebar_input_check">
-                                <label for="color_blue" class="sidebar_label_check" tabindex="0">Blue</label>                             
+                            <li class="color__item">
+                                <input id="color-blue" type="checkbox" name="blue" class="color__input">
+                                <label for="color-blue" class="color__label" tabindex="0">Blue</label>                             
                             </li>
-                            <li class="form_item">
-                                <input id="color_green" type="checkbox" name="green" class="sidebar_input_check">
-                                <label for="color_green" class="sidebar_label_check" tabindex="0">Green</label>
+                            <li class="color__item">
+                                <input id="color-green" type="checkbox" name="green" class="color__input">
+                                <label for="color-green" class="color__label" tabindex="0">Green</label>
                             </li>
-                            <li class="form_item">
-                                <input id="color_white" type="checkbox" name="white" class="sidebar_input_check">
-                                <label for="color_white" class="sidebar_label_check" tabindex="0">White</label>                            
+                            <li class="color__item">
+                                <input id="color-white" type="checkbox" name="white" class="color__input">
+                                <label for="color-white" class="color__label" tabindex="0">White</label>                            
                             </li>
                         </ul>                                         
                     </fieldset>
                     <fieldset class="delivery">
                         <legend>Delivery</legend>
-                        <ul class="dots_none form_list">
-                            <li class="form_item">
-                                <input id="free_radio" type="radio" name="shipping" class="sidebar_input_radio">
-                                <label for="free_radio" class="sidebar_label_radio" tabindex="0">Free shipping</label>
+                        <ul class="dots_none delivery__list">
+                            <li class="delivery__item">
+                                <input id="free_radio" type="radio" name="shipping" class="delivery__input">
+                                <label for="free_radio" class="delivery__label" tabindex="0">Free shipping</label>
                             </li>
-                            <li class="form_item">
-                                <input id="fast_radio" type="radio" name="shipping" class="sidebar_input_radio" checked>
-                                <label for="fast_radio" class="sidebar_label_radio" tabindex="0">Fast shipping</label>
+                            <li class="delivery__item">
+                                <input id="fast_radio" type="radio" name="shipping" class="delivery__input" checked>
+                                <label for="fast_radio" class="delivery__label" tabindex="0">Fast shipping</label>
                             </li>
                         </ul>                      
                     </fieldset>
                     <fieldset class="amount">
                         <legend>Amount</legend>
-                        <div class="amount_item">
-                            <input id="radio_min" type="radio" name="amount" class="sidebar_input_amount" checked>
-                            <label for="radio_min" class="sidebar_label_amount" tabindex="0">
-                                <div class="amount_wrapper">0-5</div></label>
+                        <div class="amount__item">
+                            <input id="radio_min" type="radio" name="amount" class="amount__input" checked>
+                            <label for="radio_min" class="amount__label" tabindex="0">
+                                <div class="amount__wrapper">0-5</div>
+                            </label>
                         </div>
-                        <div class="amount_item">
-                            <input id="radio_medium" type="radio" name="amount" class="sidebar_input_amount">
-                            <label for="radio_medium" class="sidebar_label_amount" tabindex="0">10-20</label>
+                        <div class="amount__item">
+                            <input id="radio_medium" type="radio" name="amount" class="amount__input">
+                            <label for="radio_medium" class="amount__label" tabindex="0">10-20</label>
                         </div>
-                        <div class="amount_item">
-                            <input id="radio_max" type="radio" name="amount" class="sidebar_input_amount">
-                            <label for="radio_max" class="sidebar_label_amount" tabindex="0">20-50</label>                        
+                        <div class="amount__item">
+                            <input id="radio_max" type="radio" name="amount" class="amount__input">
+                            <label for="radio_max" class="amount__label" tabindex="0">20-50</label>                        
                         </div>
                     </fieldset>
-                    <button class="button sidebar_btn" type="submit">APPLY</button>
+                    <button class="button sidebar__btn" type="submit">APPLY</button>
                 </form>
             </div>
         </section>
         <section class="catalog container">
             <h2 class="hidden">Catalog</h2>
-            <ul class="catalog_list dots_none">
+            <ul class="catalog__list dots_none">
                 @@include('catalog/index.html', {
                     "href":"#",
                     "img":"../../static/images/catalog/catalog1.png",

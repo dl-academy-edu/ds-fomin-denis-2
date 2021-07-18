@@ -1,115 +1,77 @@
+@import "./vars";
+@import "./mixins";
+
 * {
-  -webkit-box-sizing: border-box;
-      -moz-box-sizing:border-box;
-          box-sizing: border-box;
+    box-sizing: border-box;     
 }
 
 body {
-  font-family: 'Open Sans', "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-  font-style: normal;
-  color: #1E0606;
-  margin: 0;
+    font-family: 'Open Sans', "Arial", sans-serif;
+    @include font-size;
+    color: $text-color;
+    margin: 0;
 }
 
 img {
-  display: block;   
+    display: block;   
 }
 
 a {
-  text-decoration: none;
-  color: #1E0606;
+    text-decoration: none;
+    color: $text-color;
 }
 
 h1, h2, h3 {
-  font-family: "Montserrat", "Arial Narrow", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #1E0606;
+    font-family: "Montserrat", "Arial Narrow", sans-serif;
+    text-transform: uppercase;
+    color: $text-color;
 }
 
 h1 {
-  font-size: 40px;
-  line-height: 44px;
+    @include font-size(40px,44px,bold);
 }
 
 h2 {
-  font-size: 38px;
-  line-height: 46px;
+    @include font-size(38px,46px,bold);
 }
 
 h3 {
-  font-size: 26px;
-  line-height: 32px;
+    @include font-size(26px,32px,bold);
 }
 
 .hidden {
-  font-size: 0;
-  height: 0; 
+    font-size: 0;
+    height: 0; 
 }
 
 .dots_none {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
-  max-width: 1180px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
 }
 
 
 .title {
-  margin-top: 60px;
-  margin-bottom: 15px;
+    margin-top: 60px;
+    margin-bottom: 15px;
 }
 
-/* Breadcrumb */
-
-.breadcrumb {
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
-  font-family: "Crimson Text", "Georgia", serif;
-  font-style: italic;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 25px;
-  margin-top: 20px;
-  margin-bottom: 49px;
-}
-
-.breadcrumb_link {
-  margin-right: 20px;
-}
-
-.breadcrumb_img {
-  margin-top: 5px;
-  margin-right: 20px;
-}
-
-.breadcrumb_text {
-  margin: 0;
-  opacity: 0.5;
-}
 
 /* Category */
 
 .category {
-  margin-top: 129px;
-}
-
-.category_list {
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
-  -webkit-flex-wrap: wrap;
-      -moz-flex-wrap: wrap;
-          flex-wrap: wrap;
+    margin-top: 50px;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 // подключение компонентов
@@ -121,7 +83,8 @@ h3 {
 @import "./button/button";
 @import "./category/category";
 @import "./catalog/catalog";
-@import "./blog/blog"
+@import "./blog/blog";
+@import "./breadcrumb/breadcrumb"
 
 
 

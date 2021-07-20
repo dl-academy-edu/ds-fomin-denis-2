@@ -1,154 +1,100 @@
-/* Form */
-
-.contact {
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
-  -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-          justify-content: space-between;
-}
-
-.contact_form {
-  max-width: 680px;
-  width: 100%;
-  background: #E5EAF8;
-  padding: 42px 40px;
-  margin-bottom: 60px;
-}
-
-fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-input {
-  height: 50px;
-  border: 1px solid #CCCCCC;
-  outline: none;
-}
-
-textarea {
-  height: 150px;
-  border: 1px solid #CCCCCC;
-  outline: none;
-  resize: none;
-}
-
-input:hover,
-textarea:hover {
-  border-color: #B3B3B3;
-}
-
-input:focus,
-textarea:focus {
-  border-color: #CCCCCC;
-}
-
-.label_wrapper {
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
-  -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.form_2_column {
-  -webkit-display: flex;
-      -moz-display: flex;
-          display: flex;
-  -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-          justify-content: space-between;
-}
-
-.two_column {
-  width: 290px;
-}
-
-.form_label {
-  font-size: 14px;
-  line-height: 19px;
-  font-weight: normal;
-  margin-bottom: 3px;
-}
-
-input[type="number"] {
--moz-appearance: textfield;
--webkit-appearance: textfield;
-appearance: textfield;
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-display: none;
-}
-
-input[type="text"]::placeholder {
-  font-size: 18px;
-  line-height: 25px;
-  color: #1E0606;
-  padding: 14px 20px 11px 20px;
-}
-
-.form_checkbox_input {
-  display: none;
-}
-
-.form_checkbox_label {
-  position: relative;
-  font-size: 14px;
-  line-height: 19px;
-  color: #1E0606;
-  padding-left: 34px;
-  cursor: pointer;
-}
-
-.form_checkbox_label:before,
-.form_checkbox_label:after {
-  content: '';
-  position: absolute;
-  display: block;
-}
-
-
-.form_checkbox_label:before {
-  top: -4px;
-  left: 0;
-  border: 2px solid #C29974;
-  border-radius: 3px;
-  width: 16px;
-  height: 16px;
-}
-
-.form_checkbox_label:after {
-  top: -3px;
-  left: 4px;
-  width: 15px;
-  height: 15px;
-  background: url(../../static/images/button/Stroke_active.svg);
-  opacity: 0;
-}
-
-.disabled {
-  font-size: 14px;
-  line-height: 19px;
-  color: #1E0606;
-}
-
-.form_checkbox_input:checked + .form_checkbox_label:after, 
-.form_checkbox_label:before{
-  opacity: 1;
-}
-
-.form_checkbox_input:disabled + .form_checkbox_label {
-  opacity: 0.5;
-}
-
-.form_checkbox_label:hover {
-  text-decoration-line: underline;
+.form{
+    &__contact {
+        max-width: 680px;
+        width: 100%;
+        background: $light-sky-blue;
+        padding: 42px 40px;
+        margin-bottom: 60px;
+    }
+    &__fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    &__column_double {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__column {
+        width: 290px;
+    }
+    &__label {
+        @include font-size(14px,19px,normal);
+        margin-bottom: 3px;
+    }
+    &__input {
+        height: 50px;
+        border: 1px solid #CCCCCC;
+        outline: none;
+        &:hover {
+            border-color: #B3B3B3;
+        }
+        &:focus {
+            border-color: #CCCCCC;
+        }
+        &[type="text"]::placeholder {
+            @include font-size(18px,25px,normal);
+            color: $text-color;
+            padding: 14px 20px 11px 20px;
+        }
+    }
+    &__textarea {
+        height: 150px;
+        border: 1px solid #CCCCCC;
+        outline: none;
+        resize: none;
+        &:hover {
+            border-color: #B3B3B3;
+        }
+        &:focus {
+            border-color: #CCCCCC;
+        }
+    }
+    &__checkbox-input {
+        display: none;
+        &:checked {
+            opacity: 1;
+        }
+        &:disabled {
+            opacity: 0.5;
+        }
+    }
+    &__checkbox-label {
+        position: relative;
+        @include font-size(14px,19px,normal);
+        color: $text-color;
+        padding-left: 34px;
+        cursor: pointer;
+        &:before {
+            @extend %psevdo;
+            top: -4px;
+            left: 0;
+            border: 2px solid $sun-tree;
+            border-radius: 3px;
+            width: 16px;
+            height: 16px;
+        }
+        &:after {
+            @extend %psevdo;
+            top: -3px;
+            left: 4px;
+            width: 15px;
+            height: 15px;
+            background: url(../../static/images/button/Stroke_active.svg);
+            opacity: 0;
+        }
+        &:hover {
+            text-decoration-line: underline;
+        }
+    }
+    &__checkbox-input:checked + &__checkbox-label:after,
+    &__checkbox-label:before {
+        opacity: 1;
+    }
 }

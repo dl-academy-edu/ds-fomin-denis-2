@@ -14,14 +14,15 @@
     <main class="container">
       <section>
           <h1 class="title">Category Products</h1>
-          <div class="breadcrumb">
-              <a class="breadcrumb_link" href="index.html">Home</a>
-              <img class="breadcrumb_img" src="../../static/images/button/stroke.svg" alt="stroke" width="8" height="12">
-              <p class="breadcrumb_text">Catalog</p>
-          </div>          
+          @@include('breadcrumb/index.html', {
+            "class-link":" ",
+            "text-link":" ",
+            "class-img":"hidden",
+            "text":"Catalog"
+        })         
       </section>
-      <section class="category_catalog">
-          <ul class="category_list dots_none">
+      <section class="category">
+          <ul class="category__list dots_none">
             @@include('category/index.html', {
                 "href":"#",
                 "img":"../../static/images/category/category1.jpg",
@@ -44,7 +45,7 @@
                 "width":"280",
                 "height":"270",
                 "alt":"Toys",
-                "class":"title_wrapper",
+                "class":"category__wrapper",
                 "title":"Toys"
             })
             @@include('category/index.html', {
@@ -53,7 +54,7 @@
                 "width":"280",
                 "height":"270",
                 "alt":"Accessories",
-                "class":"title_wrapper",
+                "class":"category__wrapper",
                 "title":"Accessories"
             })
             @@include('category/index.html', {
@@ -62,7 +63,7 @@
                 "width":"280",
                 "height":"270",
                 "alt":"Sale",
-                "class":"title_wrapper",
+                "class":"category__wrapper",
                 "title":"Sale"
             })
             @@include('category/index.html', {
@@ -71,16 +72,16 @@
                 "width":"280",
                 "height":"270",
                 "alt":"Apparel Adults",
-                "class":"title_wrapper",
+                "class":"category__wrapper",
                 "title":"Apparel Adults"
             })
           </ul>
       </section> 
       <section class="description">
-          <h2 class="description_title">Product Description</h2>
-          <p class="description_text">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
-          <p class="description_text">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
-          <p class="description_text">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
+          <h2 class="description__title">Product Description</h2>
+          <p class="description__text">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
+          <p class="description__text">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
+          <p class="description__text">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
       </section>       
     </main>
     @@include('footer/index.html')

@@ -14,15 +14,16 @@
     <main class="container">
         <section>
             <h1 class="title">Blog</h1>
-            <div class="breadcrumb">
-                <a class="breadcrumb_link" href="index.html">Home</a>
-                <img class="breadcrumb_img" src="../../static/images/button/stroke.svg" alt="stroke" width="8" height="12">
-                <p class="breadcrumb_text">Blog</p>
-            </div>  
+            @@include('breadcrumb/index.html', {
+                "class-link":" ",
+                "text-link":" ",
+                "class-img":"hidden",
+                "text":"Blog"
+            })
         </section>
-        <section class="container">
+        <section class="blog container">
             <h2 class="hidden">Blog</h2>
-            <ul class="blog_list dots_none">
+            <ul class="blog__list dots_none">
                 @@include('blog/index.html', {
                     "img":"../../static/images/blog/blog1.jpg",
                     "alt":"Top 5 fastest growing it service companies in philly",

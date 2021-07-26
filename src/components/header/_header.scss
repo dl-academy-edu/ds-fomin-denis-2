@@ -6,6 +6,7 @@
     margin-top: 50px;
     margin-bottom: 40px;
     &__logo {
+        transition: opacity $transition;
         &:hover {
         opacity: 0.5;
         }
@@ -32,6 +33,7 @@
         text-transform: uppercase;
         color: $text-color;  
         margin-right: 20px;
+        transition: opacity $transition;
         &:hover {
         opacity: 0.5;
         }
@@ -44,6 +46,7 @@
     &__search {
         @include font-size(14px,19px,bold);
         text-transform: uppercase;
+        transition: opacity $transition;
         &:hover {
         opacity: 0.5;
         }

@@ -37,6 +37,7 @@
             border: none;
             background: #D6CAC2;
             cursor: pointer;
+            transition: background-color $transition;
             &:hover {
                 background: #725F5B;
               }

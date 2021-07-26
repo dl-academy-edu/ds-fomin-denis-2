@@ -16,6 +16,7 @@
     }
     &__link {
         color: $white;
+        transition: opacity $transition;
         &:hover {
             opacity: 0.5;
         }
@@ -49,6 +50,7 @@
         background-color: $deep-smoke;
         padding: 0 0 0 15px;
         border: 1px solid $deep-smoke;
+        transition: border $transition;
         &:hover{
             border: 1px solid #FFFDFD;
             border-right: none;
@@ -80,6 +82,7 @@
     &__text {
         margin: 0;
         margin-right: 25px;
+        transition: color $transition;
         &:hover {
             color: $sun-tree;
         }
@@ -99,6 +102,7 @@
         height: 16px;
         cursor: pointer;
         fill: $white;
+        transition: fill $transition;
         &:hover {
             fill: $gold;
         }
@@ -113,6 +117,7 @@
     &__production {
         color: #A2A2A2;
         margin: 0;
+        transition: color $transition;
         &:hover {
             text-decoration-line: underline;
             color: $white;
@@ -128,6 +133,7 @@
     display: flex;
     &__item {
         margin-right: 10px;
+        transition: opacity $transition;
         &:hover {
             opacity: 0.5;
         }

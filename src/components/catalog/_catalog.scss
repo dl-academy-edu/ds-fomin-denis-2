@@ -30,6 +30,7 @@
     top: 89px;
     right: 86px;
     opacity: 0;
+    transition: opacity $transition;
     &:hover {
         opacity: 0.9;
     }

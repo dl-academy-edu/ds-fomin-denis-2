@@ -9,6 +9,7 @@
         font-family: "Montserrat", "Arial Narrow", sans-serif;
         font-weight: bold;
         margin-right: 64px;
+        transition: opacity $transition;
         &:hover {
         opacity: 0.5;
         } 
@@ -26,6 +27,7 @@
         height: 26px;
         border: none;
         background: none;
+        transition: color $transition;
         &:hover {
         color: $sun-tree;
         }

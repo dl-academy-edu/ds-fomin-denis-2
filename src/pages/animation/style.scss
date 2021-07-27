@@ -13,7 +13,7 @@
     }
 }
 
-@keyframes message-man {
+@keyframes message {
     0%, 100% {
         opacity: 0;
     }
@@ -22,23 +22,32 @@
     }
 }
 
-@keyframes message-woman {
-    0%,100% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-}
+// @keyframes message-man-2 {
+//     0%, 100% {
+//         opacity: 0;
+//     }
+//     50% {
+//         opacity: 1;
+//     }
+// }
 
-@keyframes message-taxi {
-    0%, 100% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-}
+// @keyframes message-woman {
+//     0%,100% {
+//         opacity: 0;
+//     }
+//     50% {
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes message-taxi {
+//     0%, 100% {
+//         opacity: 0;
+//     }
+//     50% {
+//         opacity: 1;
+//     }
+// }
 
 @keyframes woman-arm {
     0%, 100% {
@@ -46,7 +55,7 @@
         left: 20%;
     }
     50% {
-        top: 70%;
+        top: 71.6%;
         left: 20%;
         transform: rotate(-45deg);
     }
@@ -139,11 +148,12 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 71px;
-    max-width: 1618px;
-    max-height: 768px;
+    width: 100%;
     &__sky {
+        width: 100%;
     }
     &__city {
+        width: 100%;
     }
     &__lantern {
         position: absolute;
@@ -160,7 +170,7 @@
             position: absolute;
             top: 20%;
             left: 75%;
-            z-index: 3;
+            z-index: 4;
         }
     }
     &__suitcases {
@@ -173,25 +183,27 @@
         position: absolute;
         top: 60%;
         left: 18%;
-        z-index: 3;
+        z-index: 4;
         &_arm {
             position: absolute;
             top: 74.6%;
             left: 20%;
-            animation: woman-arm 4s 1s;
+            z-index: 4;
+            animation: woman-arm 5s ease 1s;
         }
     }
     &__man {
         position: absolute;
         top: 43%;
         left: 25%;
-        z-index: 3;
+        z-index: 4;
         &_arm {
             position: absolute;
             top: 55%;
             left: 23.3%;
+            z-index: 3;
             transform: rotate(160deg);
-            animation: man-arm 4s 7s;          
+            animation: man-arm 6s ease 7s;          
         }
     }
     &__car {
@@ -226,7 +238,7 @@
         position: absolute;
         top: 54%;
         left: 100%;
-        z-index: 2;
+        z-index: 3;
         animation: taxi 21s 4s;
     }
     &__message {
@@ -235,14 +247,21 @@
             top: 47%;
             left: 12.5%;
             opacity: 0;
-            animation: message-woman 4s 1s;
+            animation: message 5s 1s;
         }
         &_man {
             position: absolute;
             top: 32%;
             left: 24%;
             opacity: 0;
-            animation: message-man 4s 7s;
+            animation: message 5s 7s;
+        }
+        &_man-two {
+            position: absolute;
+            top: 31%;
+            left: 24%;
+            opacity: 0;
+            animation: message 5s 16s;
         }
         &_taxi {
             position: absolute;
@@ -250,7 +269,7 @@
             left: 65%;
             opacity: 0;
             z-index: 3;
-            animation: message-taxi 4s 11s;
+            animation: message 2s 13s;
         }
     }
     

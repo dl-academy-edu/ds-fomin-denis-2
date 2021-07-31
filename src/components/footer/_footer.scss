@@ -5,10 +5,12 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 13px;
+        &_wrapper {
+            margin-top: 100px;
+        }
     }
     &__title {
         color: $dark-smoke;
-        margin-top: 100px;
         margin-bottom: 23px;
     }
     &__item {

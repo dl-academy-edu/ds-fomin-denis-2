@@ -188,6 +188,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     margin-bottom: -3px;
+    width: 1180px;
 }
 
 .about {
@@ -208,9 +209,7 @@
     &__text {
         font-family: "Crimson Text", "Georgia", serif;
         font-style: italic;
-        font-weight: normal;
-        font-size: 26px;
-        line-height: 32px;
+        @include font-size(26px,32px,normal);
         margin: 0;
         margin-bottom: -10px;
     }
@@ -227,7 +226,7 @@
     padding: 31px 30px 35px 30px;
     margin: 0;
     margin-bottom: 175px;
-    margin-right: 37px;
+    // margin-right: 37px;
     &__title {
         position: absolute;
         left: 0px;

@@ -4,11 +4,12 @@
     margin-bottom: 58px;
     &__list {
         display: flex;
+        justify-content: space-between;
+        width: 234px;
     }
     &__link {
         font-family: "Montserrat", "Arial Narrow", sans-serif;
         font-weight: bold;
-        margin-right: 64px;
         transition: opacity $transition;
         &:hover {
         opacity: 0.5;
@@ -16,11 +17,6 @@
     }
     &__link_active {
         color: $sun-tree;
-        margin-right: 67px;
-        margin-left: 457px;
-    }
-    &__link_last {
-        margin-right: 457px;
     }
     &__slider_left,&__slider_right {
         width: 13px;

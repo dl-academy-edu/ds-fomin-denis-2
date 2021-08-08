@@ -111,7 +111,19 @@
         padding: 5px 12px;
         margin-right: 4px;
         border: none;
-        background: $blue;    
+        background: $blue; 
+        &_move{
+            width: 13px;
+            height: 26px;
+            stroke: $text-color;
+            transition: opacity $transition;
+            &:hover {
+                opacity: 0.5;
+            }
+            &:active {
+                opacity: 0.2;
+            }
+        }  
     }
     &__info {
         margin-left: 20px;

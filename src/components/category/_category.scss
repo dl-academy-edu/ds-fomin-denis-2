@@ -2,6 +2,23 @@
     &__item {
         position: relative;
         text-align: center;
+        max-width: 280px;
+        max-height: 270px;
+        @media (min-width: 1068px) and (max-width: 1279px) {
+            margin: 10px;
+            max-width: 203px;
+            max-height: 196px;
+        }
+        @media (min-width: 768px) and (max-width: 1067px) {
+            margin: 10px;
+            max-width: 203px;
+            max-height: 196px;
+        }
+        @media (min-width: 375px) and (max-width: 767px) {
+            margin: 10px;
+            max-width: 160px;
+            max-height: 154px;
+        }
         &:nth-child(1) {
             background-color: #DBE4DB;
         }

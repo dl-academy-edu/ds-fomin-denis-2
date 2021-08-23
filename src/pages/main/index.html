@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../static/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -40,24 +41,18 @@
                 @@include('category/index.html', {
                     "href":"#",
                     "img":"../../static/images/category/category1.jpg",
-                    "width":"280",
-                    "height":"270",
                     "alt":"Apparel Kids",
                     "title":"Apparel Kids"
                 })
                 @@include('category/index.html', {
                     "href":"#",
                     "img":"../../static/images/category/category2.jpg",
-                    "width":"280",
-                    "height":"270",
                     "alt":"Holiday Shop",
                     "title":"Holiday Shop"
                 })
                 @@include('category/index.html', {
                     "href":"../../pages/toys/index.html",
                     "img":"../../static/images/category/category3.jpg",
-                    "width":"280",
-                    "height":"270",
                     "alt":"Toys",
                     "class":"category__wrapper",
                     "title":"Toys"
@@ -65,8 +60,6 @@
                 @@include('category/index.html', {
                     "href":"#",
                     "img":"../../static/images/category/category4.jpg",
-                    "width":"280",
-                    "height":"270",
                     "alt":"Accessories",
                     "class":"category__wrapper",
                     "title":"Accessories"
@@ -93,7 +86,7 @@
             </div>            
         </section>
         <section class="delivery">
-            <img src="../../static/images/delivery.jpg" alt="delivery" width="480" height="559" class="delivery__img">
+            <img src="../../static/images/delivery.jpg" alt="delivery" class="delivery__img">
             <div class="delivery__wrapper">
                 <h2 class="delivery__title">Delivery</h2>
                 <ul class="delivery__list dots_none">
@@ -114,10 +107,10 @@
         <section class="brands">
             <h2 class="hidden">Brands</h2>
             <ul class="brands__list dots_none">
-                <li><img src="../../static/images/brands/brand1.png" alt="brand1" width="193" height="60"></li>
-                <li><img src="../../static/images/brands/brand2.png" alt="brand2" width="179" height="61"></li>
-                <li><img src="../../static/images/brands/brand3.png" alt="brand3" width="216" height="46"></li>
-                <li><img src="../../static/images/brands/brand4.png" alt="brand4" width="211" height="40"></li>
+                <li class="brands__item"><img class="brands__img" src="../../static/images/brands/brand1.png" alt="brand1"></li>
+                <li class="brands__item"><img class="brands__img" src="../../static/images/brands/brand2.png" alt="brand2"></li>
+                <li class="brands__item"><img class="brands__img" src="../../static/images/brands/brand3.png" alt="brand3"></li>
+                <li class="brands__item"><img class="brands__img" src="../../static/images/brands/brand4.png" alt="brand4"></li>
             </ul>
         </section>        
     </main>
@@ -139,7 +132,7 @@
                 <p class="map__text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
             </div>
             
-            <iframe class="map__frame" title="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A5bc4eeacfc6b9943de3b90329ca544ebf080e770c7b8237dc8fbf029551cdaa1&amp;source=constructor" width="483" height="196"></iframe>
+            <iframe class="map__frame" title="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A5bc4eeacfc6b9943de3b90329ca544ebf080e770c7b8237dc8fbf029551cdaa1&amp;source=constructor"></iframe>
         </article>
     </section>    
     @@include('footer/index.html')

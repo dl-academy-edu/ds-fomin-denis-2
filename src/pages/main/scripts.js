@@ -22,3 +22,35 @@ window.addEventListener('keydown', function(event) {
     }
 
 })
+
+
+var buttonMobileHeader = document.querySelector('.header__mobile-menu_js');
+var buttonCloseMobileHeader = document.querySelector('.mobile-header_close_js');
+var mobileHeader = document.querySelector('.mobile-header');
+
+buttonMobileHeader.addEventListener('click',function() {
+    mobileHeader.classList.add('mobile-header_open');
+})
+
+buttonCloseMobileHeader.addEventListener('click',function() {
+    mobileHeader.classList.remove('mobile-header_open');
+}) 
+
+// Домашнее задание 1, модель 3
+
+// let name;
+// let surname;
+// let age;
+// let user;
+
+// name = prompt("введите ваше имя");
+// surname = prompt("введите вашу фамилию");
+// age = prompt("введите ваш возраст");
+
+// user = {
+//     name: name,
+//     surname: surname,
+//     age: age
+// };
+
+// console.log(user)

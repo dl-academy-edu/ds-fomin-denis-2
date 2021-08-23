@@ -5,6 +5,19 @@
         background: $light-sky-blue;
         padding: 42px 40px;
         margin-bottom: 60px;
+        @media (min-width: 768px) and (max-width: 1067px) {
+            max-width: 648px;
+            width: 100%;
+            padding: 42px 56px;
+            margin: 0 auto;
+        }
+        @media (min-width: 375px) and (max-width: 767px) {
+            max-width: 335px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
     }
     &__fieldset {
         border: none;
@@ -20,9 +33,19 @@
     &__column_double {
         display: flex;
         justify-content: space-between;
+        @media (min-width: 375px) and (max-width: 767px) {
+            flex-direction: column;
+            // width: 285px;
+        }
     }
     &__column {
         width: 290px;
+        @media (min-width: 768px) and (max-width: 1067px) {
+            width: 258px;
+        }
+        @media (min-width: 375px) and (max-width: 767px) {
+            width: 100%;
+        }
     }
     &__label {
         @include font-size(14px,19px,normal);
@@ -34,6 +57,9 @@
         outline: none;
         transition: border-color $transition;
         padding: 0px 0px 0px 11px;
+        @media (min-width: 375px) and (max-width: 767px) {
+            height: 40px;
+        }
         &:hover {
             border-color: #B3B3B3;
         }

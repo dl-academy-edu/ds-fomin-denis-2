@@ -1,33 +1,34 @@
 .pagination {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 58px;
+    margin-bottom: 56px;
     &__list {
         display: flex;
+        justify-content: space-between;
+        width: 234px;
     }
     &__link {
+        @include font-size(16px,19px,bold);
         font-family: "Montserrat", "Arial Narrow", sans-serif;
-        font-weight: bold;
-        margin-right: 64px;
+        transition: opacity $transition;
         &:hover {
         opacity: 0.5;
         } 
     }
     &__link_active {
         color: $sun-tree;
-        margin-right: 67px;
-        margin-left: 457px;
     }
-    &__link_last {
-        margin-right: 457px;
-    }
-    &__slider_left,&__slider_right {
+    &__slider {
         width: 13px;
         height: 26px;
         border: none;
-        background: none;
+        transition: stroke $transition;
         &:hover {
-        color: $sun-tree;
+        stroke: $sun-tree;
+        }
+        &:active {
+            stroke: $button-active;
         }
     }
 }

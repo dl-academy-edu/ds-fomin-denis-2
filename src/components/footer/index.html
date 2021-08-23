@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="footer__main container">
-        <div>
+        <div class="footer__main_wrapper">
             <p class="footer__title">Navigation</p>
                 <ul class="footer__nav dots_none">
                     <li class="footer__item"><a class="footer__link" href="#">About Us</a></li>
@@ -11,7 +11,7 @@
                     <li class="footer__item"><a class="footer__link" href="#">Shop By Designer</a></li>
                 </ul>
         </div> 
-        <div>
+        <div class="footer__main_wrapper">
             <p class="footer__title">Customer Information</p>
             <ul class="footer__nav dots_none">
                 <li class="footer__item"><a class="footer__link" href="../../pages/contacts/index.html">Contact Us</a></li>
@@ -22,7 +22,7 @@
                 <li class="footer__item"><a class="footer__link" href="#">Search</a></li>
             </ul>
         </div>        
-        <div>
+        <div class="footer__main_wrapper">
             <p class="footer__title">Connect</p>
             <div>
                 <div class="footer__nav">
@@ -50,24 +50,19 @@
         <div class="footer__wrapper">
             <p class="footer__text">Company Rating</p>
             <div class="footer__rating">
-                <svg width="14" height="13" viewBox="0 0 14 13" class="footer__star" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"/>
-                </svg>
-                <svg width="14" height="13" viewBox="0 0 14 13" class="footer__star" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"/>
-                </svg>
-                <svg width="14" height="13" viewBox="0 0 14 13" class="footer__star" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"/>
-                </svg>
-                <svg width="14" height="13" viewBox="0 0 14 13" class="footer__star" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"/>
-                </svg>
-                <svg width="14" height="13" viewBox="0 0 14 13" class="footer__star" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.60845 0.927052C5.9078 0.0057416 7.21121 0.00574088 7.51056 0.927052L8.58013 4.21885H12.0413C13.0101 4.21885 13.4128 5.45846 12.6291 6.02786L9.82895 8.06231L10.8985 11.3541C11.1979 12.2754 10.1434 13.0415 9.35968 12.4721L6.55951 10.4377L3.75934 12.4721C2.97563 13.0415 1.92115 12.2754 2.2205 11.3541L3.29007 8.06231L0.4899 6.02787C-0.293814 5.45846 0.108961 4.21885 1.07768 4.21885H4.53888L5.60845 0.927052Z"/>
-                </svg>                        
-            </div>                    
+                <input class="footer__rating_input" type="radio" name="star" id="star-1" value="1">
+                <label class="footer__rating_label" for="star-1" aria-label="one star"></label>
+                <input class="footer__rating_input" type="radio" name="star" id="star-2" value="2">
+                <label class="footer__rating_label" for="star-2" aria-label="two star"></label>
+                <input class="footer__rating_input" type="radio" name="star" id="star-3" value="3">
+                <label class="footer__rating_label" for="star-3" aria-label="three star"></label>
+                <input class="footer__rating_input" type="radio" name="star" id="star-4" value="4">
+                <label class="footer__rating_label" for="star-4" aria-label="four star"></label>
+                <input class="footer__rating_input" type="radio" name="star" id="star-5" value="5">
+                <label class="footer__rating_label" for="star-5" aria-label="five star"></label>
+            </div>         
             <p class="footer__license">Copyright © 2018 Dlk • Design Life Kids</p>
             <a class="footer__production" href="#">Web Design — Direct Line Development</a>
-            </div>
+        </div>
     </div>        
 </footer>

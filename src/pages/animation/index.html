@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Design Life Kids</title>
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../static/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    @@include('header/index.html')
+    <main>
+        <section class="scene container">
+            <h1 class="scene__title">Animation Scene</h1>
+            @@include('breadcrumb/index.html', {
+                "class-link":" ",
+                "text-link":" ",
+                "class-img":"hidden",
+                "text":"Animation"
+            })
+        </section>
+        <section class="animation">
+            <img class="animation__sky" src="../../static/images/animation/Clouds and sun.png" alt="clouds and sun" width="1341" height="135">
+            <img class="animation__city" src="../../static/images/animation/City.png" alt="city" width="1585" height="630">
+            <img class="animation__lantern" src="../../static/images/animation/Lantern1.png" alt="lantern" width="151" height="395">
+            <img class="animation__lantern_two" src="../../static/images/animation/Lantern1.png" alt="lantern" width="151" height="395">
+            <img class="animation__lantern_three" src="../../static/images/animation/Lantern2.png" alt="lantern" width="214" height="562">
+            <img class="animation__suitcases" src="../../static/images/animation/Suitcases.png" alt="suitcases" width="191" height="95">
+            <img class="animation__woman" src="../../static/images/animation/woman.png" alt="woman" width="98" height="267">
+            <img class="animation__woman_arm" src="../../static/images/animation/woman-arm.png" alt="woman arm" width="63" height="44">
+            <img class="animation__man" src="../../static/images/animation/man.png" alt="man" width="205" height="391">
+            <img class="animation__man_arm" src="../../static/images/animation/man-arm.png" alt="man arm" width="89" height="128">
+            <img class="animation__car" src="../../static/images/animation/Car one.png" alt="car one" width="251" height="99">
+            <img class="animation__car_two" src="../../static/images/animation/Car two.png" alt="car two" width="203" height="96">
+            <img class="animation__car_three" src="../../static/images/animation/Car three.png" alt="car three" width="246" height="65">
+            <img class="animation__car_four" src="../../static/images/animation/Car four.png" alt="car four" width="268" height="126">
+            <img class="animation__taxi" src="../../static/images/animation/Taxi.png" alt="taxi" width="886" height="266">
+            <img class="animation__message_woman" src="../../static/images/animation/Message-woman.png" alt="message woman" width="160" height="99">
+            <img class="animation__message_man" src="../../static/images/animation/Message-man.png" alt="message man" width="160" height="77">
+            <img class="animation__message_man-two" src="../../static/images/animation/Message-man2.png" alt="message man-2" width="160" height="77">
+            <img class="animation__message_taxi" src="../../static/images/animation/Message-taxi.png" alt="message taxi" width="160" height="99">
+        </section>
+    </main>
+    @@include('footer/index.html')    
+</body>
+</html>

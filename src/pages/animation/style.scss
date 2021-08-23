@@ -1,0 +1,250 @@
+@import "../../components/_mixins";
+@import "../../components/_vars";
+
+@keyframes taxi {
+    0% {
+        left: 100%;
+    }
+    50% {
+        left: 44%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes message {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes woman-arm {
+    0%, 100% {
+        top: 74.6%;
+        left: 20%;
+    }
+    50% {
+        top: 71.6%;
+        left: 20%;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes man-arm {
+    0%, 100% {
+        top: 55%;
+        left: 23.3%;
+    }
+    50% {
+        top: 40%;
+        left: 25.3%;
+        transform: rotate(0deg);
+        transform-origin: 90px 150px;
+    }
+}
+
+@keyframes car1 {
+    
+    0% {
+        top: 57%;
+        left: -10%;
+    }
+    10% {
+        top: 57%;
+        left: 2%;
+    }
+    100% {
+        top: 57%;
+        left: 100%;
+    }
+}
+
+@keyframes car2 {
+    0% {
+        top: 57%;
+        left: -10%;
+    }
+    28% {
+        top: 57%;
+        left: 28%;
+    }
+    100% {
+        top: 57%;
+        left: 100%;
+    }
+}
+
+@keyframes car3 {
+    0% {
+        top: 60%;
+        left: -30%;
+    }
+    50% {
+        top: 60%;
+        left: 50%;
+    }
+    100% {
+        top: 60%;
+        left: 100%;
+    }
+}
+
+@keyframes car4 {
+    0% {
+        top: 53%;
+        left: -30%;
+    }
+    86% {
+        top: 53%;
+        left: 86%;
+    }
+    100% {
+        top: 53%;
+        left: 100%;
+    }
+}
+
+.scene {
+    &__title {
+        @include font-size(36px,44px,bold);
+        margin-top: 60px;
+        margin-bottom: -8px;
+    }
+}
+
+
+.animation {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 71px;
+    width: 100%;
+    &__sky {
+        width: 100%;
+    }
+    &__city {
+        width: 100%;
+    }
+    &__lantern {
+        position: absolute;
+        top: 22%;
+        left: 35%;
+        z-index: 2;
+        &_two {
+            position: absolute;
+            top: 22%;
+            left: 93%;
+            z-index: 2;
+        }
+        &_three {
+            position: absolute;
+            top: 20%;
+            left: 75%;
+            z-index: 4;
+        }
+    }
+    &__suitcases {
+        position: absolute;
+        top: 82.5%;
+        left: 17%;
+        z-index: 4;
+    }
+    &__woman {
+        position: absolute;
+        top: 60%;
+        left: 18%;
+        z-index: 4;
+        &_arm {
+            position: absolute;
+            top: 74.6%;
+            left: 20%;
+            z-index: 4;
+            animation: woman-arm 5s ease 1s;
+        }
+    }
+    &__man {
+        position: absolute;
+        top: 43%;
+        left: 25%;
+        z-index: 4;
+        &_arm {
+            position: absolute;
+            top: 55%;
+            left: 23.3%;
+            z-index: 3;
+            transform: rotate(160deg);
+            animation: man-arm 6s ease 7s;          
+        }
+    }
+    &__car {
+        position: absolute;
+        top: 57%;
+        left: 2%;
+        z-index: 1;
+        animation: car1 10s linear infinite;
+        &_two {
+            position: absolute;
+            top: 57%;
+            left: 28%;
+            z-index: 1;
+            animation: car2 7s linear infinite;
+        }
+        &_three {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            z-index: 0;
+            animation: car3 5s linear infinite;
+        }
+        &_four {
+            position: absolute;
+            top: 53%;
+            left: 86%;
+            z-index: 0;
+            animation: car4 6s linear infinite;
+        }
+    }
+    &__taxi {
+        position: absolute;
+        top: 54%;
+        left: 100%;
+        z-index: 3;
+        animation: taxi 21s 4s;
+    }
+    &__message {
+        &_woman {
+            position: absolute;
+            top: 47%;
+            left: 12.5%;
+            opacity: 0;
+            animation: message 5s 1s;
+        }
+        &_man {
+            position: absolute;
+            top: 32%;
+            left: 24%;
+            opacity: 0;
+            animation: message 5s 7s;
+        }
+        &_man-two {
+            position: absolute;
+            top: 31%;
+            left: 24%;
+            opacity: 0;
+            animation: message 5s 16s;
+        }
+        &_taxi {
+            position: absolute;
+            top: 48%;
+            left: 65%;
+            opacity: 0;
+            z-index: 3;
+            animation: message 2s 13s;
+        }
+    }
+    
+}
+

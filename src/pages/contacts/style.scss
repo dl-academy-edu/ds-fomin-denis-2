@@ -10,8 +10,7 @@
 .support {
     display: flex;
     flex-direction: column;
-    margin-left: 120px;
-    width: 380px;
+    max-width: 380px;
     &__text {
         margin: 0;
         margin-bottom: 20px;

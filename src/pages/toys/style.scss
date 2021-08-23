@@ -202,10 +202,12 @@ input {
         width: 80px;
         height: 35px;
         user-select: none;
+        transition: background-color $transition;
         &:hover {
             background: #EDDEEB;
         }
     }
+    transition: background-color $transition;
     &__input:checked + &__label {
         background: #F3D0DB;
     }

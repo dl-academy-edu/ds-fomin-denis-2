@@ -197,7 +197,7 @@
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
-        margin-right: 167px;
+        margin-right: 150px;
         // @media (min-width: 1280px) {
         //     margin-right: 0;
         // }
@@ -286,12 +286,15 @@
     &__connect {
         @media (min-width: 375px) and (max-width: 767px) {
             margin-top: 60px;
-            margin-bottom: 60px;
+            margin-bottom: 25px;
         }
     }
 }
 .social {
     display: flex;
+    @media (min-width: 375px) and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
     &__item {
         margin-right: 10px;
         transition: opacity $transition;

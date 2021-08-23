@@ -38,6 +38,12 @@
             justify-content: space-between;
         }
     }
+    &__mobile {
+        @media (min-width: 375px) and (max-width: 767px) {
+            max-width: 335px;
+            width: 100%;
+        }
+    }
 }
 .description {
     margin-left: 200px;

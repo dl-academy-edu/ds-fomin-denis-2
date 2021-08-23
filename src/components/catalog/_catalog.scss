@@ -1,6 +1,16 @@
 .catalog {
     display: flex;
     flex-wrap: wrap;
+    &__img {
+        @media (min-width: 768px) and (max-width: 1067px) {
+            width: 203px;
+            height: 211px;
+        }
+        @media (min-width: 375px) and (max-width: 767px) {
+            width: 160px;
+            height: 167px;
+        }
+    }
     &__item {
         display: flex;
         flex-direction: column;
@@ -8,15 +18,36 @@
         width: 380px;
         margin-bottom: 50px;
         position: relative;
+        @media (min-width: 768px) and (max-width: 1067px) {
+            width: 203px;
+            height: 288px;
+        }
+        @media (min-width: 375px) and (max-width: 767px) {
+            width: 160px;
+            height: 247px;
+            margin-bottom: 10px;
+        }
     }
     &__link {
         @include font-size(14px,19px,normal);
         text-transform: uppercase;
         margin-top: 30px;
+        @media (min-width: 768px) and (max-width: 1067px) {
+            @include font-size(12px,16px,normal);
+        }
+        @media (min-width: 375px) and (max-width: 767px) {
+            @include font-size(12px,16px,normal);
+        }
     }
     &__price {
-        font-weight: bold;
         margin: 0;
+        @include font-size(16px,22px,bold);
+        @media (min-width: 768px) and (max-width: 1067px) {
+            @include font-size(14px,19px,bold);
+        }
+        @media (min-width: 375px) and (max-width: 767px) {
+            @include font-size(12px,16px,bold);
+        }
     }
 }
 
@@ -30,6 +61,12 @@
     right: 86px;
     opacity: 0;
     transition: opacity $transition;
+    @media (min-width: 375px) and (max-width: 767px) {
+        width: 80px;
+        height: 80px;
+        top: 50px;
+        right: 38px;
+    }
     &:hover {
         opacity: 0.9;
     }
@@ -43,6 +80,9 @@
         text-transform: uppercase;
         text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
         padding: 60px 11px 60px 11px;
-        
+        @media (min-width: 375px) and (max-width: 767px) {
+            @include font-size(21px,24px,bold);
+            padding: 0;
+        }
     }
 }

@@ -5,6 +5,9 @@
     display: flex;
     margin-top: 20px;
     margin-bottom: 50px;
+    @media (min-width: 768px) and (max-width: 1067px) {
+        margin-bottom: 30px;
+    }
     @media (min-width: 375px) and (max-width: 767px) {
         @include font-size(16px,20px,normal);
         margin-bottom: 20px;

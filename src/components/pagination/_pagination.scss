@@ -2,16 +2,23 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 56px;
     &__list {
         display: flex;
         justify-content: space-between;
         width: 234px;
+        @media (min-width: 375px) and (max-width: 767px) {
+            width: 188px;
+        }
     }
     &__link {
         @include font-size(16px,19px,bold);
         font-family: "Montserrat", "Arial Narrow", sans-serif;
         transition: opacity $transition;
+        @media (min-width: 375px) and (max-width: 767px) {
+            @include font-size(14px,17px,bold);
+        }
         &:hover {
         opacity: 0.5;
         } 

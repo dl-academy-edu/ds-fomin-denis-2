@@ -13,7 +13,7 @@ body {
 }
 
 img {
-    display: block;   
+    display: block;
 }
 
 a {
@@ -29,27 +29,27 @@ h1, h2, h3 {
 
 h1 {
     @include font-size(40px,44px,bold);
-    @media (min-width: 375px) and (max-width: 767px) {
+    @media (max-width: 767px) {
         @include font-size(36px,40px,bold);    
     }
 }
 
 h2 {
     @include font-size(38px,46px,bold);
-    @media (min-width: 768px) and (max-width: 1067px) {
+    @media (max-width: 1200px) {
         @include font-size(36px,44px,bold); 
     }
-    @media (min-width: 375px) and (max-width: 767px) {
+    @media (max-width: 767px) {
         @include font-size(24px,29px,bold);    
     }
 }
 
 h3 {
     @include font-size(26px,32px,bold);
-    @media (min-width: 768px) and (max-width: 1067px) {
+    @media (max-width: 1200px) {
         @include font-size(24px,29px,bold); 
     }
-    @media (min-width: 375px) and (max-width: 767px) {
+    @media (max-width: 767px) {
         @include font-size(18px,22px,bold);    
     }
 }
@@ -66,22 +66,14 @@ h3 {
 }
 
 .container {
-    max-width: 1180px;
+    max-width: 1210px;
     width: 100%;
+    padding: 0 15px;
     margin: 0 auto;
     position: relative;
-    // @media (max-width: 1280px) {
-    //     max-width: 1000px;
-    //     width: 100%;
-    // }
-    @media (min-width: 1068px) and (max-width: 1279px) {
-        max-width: 748px;
-        width: 100%;
-    }
-    @media (min-width: 768px) and (max-width: 1067px) {
-        max-width: 648px;
-        width: 100%;
-    }
+    @media (max-width: 768px) {
+      max-width: 678px;
+    }   
 }
 
 

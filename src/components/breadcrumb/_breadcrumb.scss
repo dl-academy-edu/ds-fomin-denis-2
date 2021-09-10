@@ -5,12 +5,12 @@
     display: flex;
     margin-top: 20px;
     margin-bottom: 50px;
-    @media (min-width: 768px) and (max-width: 1067px) {
+    @media (max-width: 768px) {
         margin-bottom: 30px;
     }
-    @media (min-width: 375px) and (max-width: 767px) {
+    @media (max-width: 425px) {
         @include font-size(16px,20px,normal);
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
     &__link {
         margin-right: 20px;

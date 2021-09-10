@@ -4,11 +4,14 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 56px;
+    @media (max-width: 425px) {
+        padding: 0;
+    }
     &__list {
         display: flex;
         justify-content: space-between;
         width: 234px;
-        @media (min-width: 375px) and (max-width: 767px) {
+        @media (max-width: 425px) {
             width: 188px;
         }
     }
@@ -16,7 +19,7 @@
         @include font-size(16px,19px,bold);
         font-family: "Montserrat", "Arial Narrow", sans-serif;
         transition: opacity $transition;
-        @media (min-width: 375px) and (max-width: 767px) {
+        @media (max-width: 425px) {
             @include font-size(14px,17px,bold);
         }
         &:hover {

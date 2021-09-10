@@ -23,49 +23,53 @@
 		})         
 		</section>
 		<section class="category">
-			<ul class="category__list dots_none">
-			@@include('category/index.html', {
-				"href":"#",
-				"img":"../../static/images/category/category1.jpg",
-				"alt":"Apparel Kids",
-				"title":"Apparel Kids"
-			})
-			@@include('category/index.html', {
-				"href":"#",
-				"img":"../../static/images/category/category2.jpg",
-				"alt":"Holiday Shop",
-				"title":"Holiday Shop"
-			})
-			@@include('category/index.html', {
-				"href":"../../pages/toys/index.html",
-				"img":"../../static/images/category/category3.jpg",
-				"alt":"Toys",
-				"class":"category__wrapper",
-				"title":"Toys"
-			})
-			@@include('category/index.html', {
-				"href":"#",
-				"img":"../../static/images/category/category4.jpg",
-				"alt":"Accessories",
-				"class":"category__wrapper",
-				"title":"Accessories"
-			})
-			@@include('category/index.html', {
-				"href":"#",
-				"img":"../../static/images/category/category5.jpg",
-				"alt":"Sale",
-				"class":"category__wrapper",
-				"title":"Sale"
-			})
-			@@include('category/index.html', {
-				"href":"#",
-				"img":"../../static/images/category/category6.jpg",
-				"alt":"Apparel Adults",
-				"class":"category__wrapper",
-				"title":"Apparel Adults"
-			})
-			</ul>
-		</section> 
+			<div class="container-col">
+			  <div class="row flex-wrap">
+				<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+					<div class="content">
+						<a href="#"class="category__link">
+							<p class="category__title">Apparel Kids</p>
+						</a>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-md-4 col-xs-6">
+					<div class="content">
+						<a href="#"class="category__link">
+							<p class="category__title">Holiday Shop</p>
+						</a>
+					</div>
+				</div>
+				<div class="col-xl-3 add-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+					<div class="content">
+						<a href="../../pages/toys/index.html"class="category__link">
+							<p class="category__title">Toys</p>
+						</a>
+					</div>
+				</div>
+				<div class="col-xl-3 skip-xl-2 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+					<div class="content">
+						<a href="#"class="category__link">
+							<p class="category__title">Accessories</p>
+						</a>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+					<div class="content">
+						<a href="#"class="category__link">
+							<p class="category__title">Sale</p>
+						</a>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+					<div class="content">
+						<a href="#"class="category__link">
+							<p class="category__title">Apparel Adults</p>
+						</a>
+					</div>
+				</div>
+			  </div>
+			</div>
+		  </section>
 		<section class="description">
 			<h2 class="description__title">Product Description</h2>
 			<p class="description__text">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>

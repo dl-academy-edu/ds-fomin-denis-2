@@ -4,57 +4,58 @@
 /* Category */
 
 .category {
-    margin-top: 60px;
     margin-bottom: 50px;
     display: flex;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
+    @media (max-width: 1024px) {
+        margin-bottom: 40px;
+    }
+    @media (max-width: 767px) {
+        margin-bottom: 20px;
+    }
     &__item {
         margin-right: 20px;
         margin-bottom: 23px;
-        &:nth-child(4){
-            margin-left: 200px;
-            @media (min-width: 1068px) and (max-width: 1279px) {
-                margin-left: 0px;
-            }
-            @media (min-width: 768px) and (max-width: 1067px) {
-                margin-left: 0px;
-            }
-            @media (min-width: 375px) and (max-width: 767px) {
-                margin-left: 0px;
-            }
-        }
-    }
-}
-
-.category {
-    margin-top: 50px;
-    @media (min-width: 375px) and (max-width: 767px) {
-        margin-top: 20px;
     }
     &__list {
         display: flex;
         flex-wrap: wrap;
-        @media (min-width: 768px) and (max-width: 1067px) {
-            justify-content: space-between;
+        @media (max-width: 1024px) {
+            justify-content: center;
         }
     }
     &__mobile {
-        @media (min-width: 375px) and (max-width: 767px) {
+        @media (max-width: 375px) {
             max-width: 335px;
             width: 100%;
         }
     }
+    &__title {
+      width: 95%;
+    }
 }
+
+
+@for $i from 1 through 6 {
+    div:nth-child(#{$i}) > .content {
+        background-image: url(../../static/images/category/category#{$i}.jpg);
+        background-color: nth($colors, $i);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;   
+    }
+}
+
 .description {
     margin-left: 200px;
     width: 57%;
     margin-bottom: 40px;
-    @media (min-width: 768px) and (max-width: 1067px) {
+    @media (max-width: 1024px) {
         margin-left: 0px;
         width: 100%;
         margin-bottom: 50px;
     }
-    @media (min-width: 375px) and (max-width: 767px) {
+    @media (max-width: 767px) {
         margin-left: 0px;
         width: 100%;
         margin-bottom: 50px;
@@ -62,9 +63,121 @@
     &__title {
         margin: 0;
         margin-bottom: 28px;
+        @media (max-width: 767px) {
+            margin-bottom: 15px;
+        }
     }
     &__text {
         margin: 0;
         padding-bottom: 16px;
     }
+}
+
+// col
+$numberColumns: 12;
+$gap: 20px;
+
+$size-xl: 1220px;
+$size-lg: 1000px;
+$size-md: 768px;
+$size-sm: 576px;
+
+@mixin media-interval($min, $max) {
+  @if $max == 0 {
+    $max: 9999px;
+  }
+  
+  @media (min-width: ($min + 1px)) and (max-width: $max) {
+    @content;
+  }
+}
+@mixin create-grid($type-width, $media-size) {
+  @if media-size == "full" {
+    .container-col {
+      max-width: 100%;
+    }
+  } @else {
+    .container-col {
+      max-width: $media-size - $gap*2;
+    }
+  }
+  @for $i from 1 through $numberColumns {
+    .col-#{$type-width}-#{$i} {
+      width: (100% / $numberColumns) * $i;
+    }
+  
+    .skip-#{$type-width}-#{$i} {
+      margin-left: (100% / $numberColumns) * $i;
+    }
+    .add-#{$type-width}-#{$i} {
+      margin-right: (100% / $numberColumns) * $i;
+    }
+  }
+}
+
+@include media-interval($size-xl, 0) {
+  @include create-grid(xl, $size-xl);
+}
+@include media-interval($size-lg, $size-xl) {
+  @include create-grid(lg, $size-lg);
+}
+@include media-interval($size-md, $size-lg) {
+  @include create-grid(md, $size-md);
+}
+@include media-interval($size-sm, $size-md) {
+  @include create-grid(sm, $size-sm);
+}
+@include media-interval(0, $size-sm) {
+  @include create-grid(xs, "full");
+}
+
+.container-col {
+  padding-left: $gap;
+  padding-right: $gap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-fluid {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: $gap;
+  padding-right: $gap;
+}
+
+.row {
+  display: flex;
+  margin: (-$gap) (-$gap/2) 0 (-$gap/2);
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+div[class*="col"] {
+  box-sizing: border-box;
+  padding: $gap $gap/2 0 $gap/2;
+}
+
+
+.row {
+  .content {
+    padding: 15px;
+    box-sizing: border-box;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 767px) {
+      height: 248px;
+  }
+    @media (max-width:425px) {
+        height: 155px;
+    }    
+  }
 }

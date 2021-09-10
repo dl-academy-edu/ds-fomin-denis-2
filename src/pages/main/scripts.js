@@ -35,22 +35,3 @@ buttonMobileHeader.addEventListener('click',function() {
 buttonCloseMobileHeader.addEventListener('click',function() {
     mobileHeader.classList.remove('mobile-header_open');
 }) 
-
-// Домашнее задание 1, модель 3
-
-// let name;
-// let surname;
-// let age;
-// let user;
-
-// name = prompt("введите ваше имя");
-// surname = prompt("введите вашу фамилию");
-// age = prompt("введите ваш возраст");
-
-// user = {
-//     name: name,
-//     surname: surname,
-//     age: age
-// };
-
-// console.log(user)

@@ -2,10 +2,15 @@
 @import "../../components/_vars";
 
 .blog {
+    padding: 0;
     &__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 53px;
+        @media (max-width: 600px) {
+            flex-direction: column;
+            margin-bottom: 35px; 
+        }
     }
 }

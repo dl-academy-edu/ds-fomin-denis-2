@@ -5,6 +5,24 @@
         background: $light-sky-blue;
         padding: 42px 40px;
         margin-bottom: 60px;
+        @media (max-width: 1024px) {
+            max-width: 648px;
+            width: 100%;
+            padding: 42px 56px;
+            margin: 0 auto;
+        }
+        @media (max-width: 767px) {
+            width: 100%;
+            padding: 25px 25px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__button_wrapper {
+        @media (max-width: 767px) {
+            width: 98px;
+        }
     }
     &__fieldset {
         border: none;
@@ -16,16 +34,31 @@
         flex-direction: column;
         width: 100%;
         margin-bottom: 20px;
+        @media (max-width: 767px) {
+            margin-bottom: 15px;
+        }
     }
     &__column_double {
         display: flex;
         justify-content: space-between;
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
     }
     &__column {
         width: 290px;
+        @media (max-width: 1200px) {
+            width: 274px;
+        }
+        @media (max-width: 1024px) {
+            width: 258px;
+        }
+        @media (max-width: 767px) {
+            width: 100%;
+        }
     }
     &__label {
-        @include font-size(14px,19px,normal);
+        @include font-size(14px,16px,normal);
         margin-bottom: 3px;
     }
     &__input {
@@ -34,6 +67,9 @@
         outline: none;
         transition: border-color $transition;
         padding: 0px 0px 0px 11px;
+        @media (max-width: 767px) {
+            height: 40px;
+        }
         &:hover {
             border-color: #B3B3B3;
         }
@@ -70,9 +106,9 @@
     }
     &__checkbox-label {
         position: relative;
-        @include font-size(14px,19px,normal);
+        @include font-size(14px,16px,normal);
         color: $text-color;
-        padding-left: 34px;
+        padding-left: 27px;
         cursor: pointer;
         &:before {
             @extend %psevdo;

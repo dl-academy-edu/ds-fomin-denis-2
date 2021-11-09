@@ -1,9 +1,15 @@
-<li>
+<li class="blog__items">
     <article class="blog__item">
         <h2 class="hidden">Blog Item</h2>
-        <img class="blog__img" src="@@img" alt="@@alt" width="380" height="220">
+        <picture class="blog__img">
+            <source srcset="@@img-mobile, @@img-mobile-2x 2x" media="(max-width: 425px)">
+            <source srcset="@@img-tablet, @@img-tablet-2x 2x" media="(max-width: 1024px)">
+            <source srcset="@@img, @@img-2x 2x">
+            <img src="@@img" alt="@@alt">
+        </picture>
         <p class="blog__date">@@date</p>
         <a class="blog__title" href="#">@@title</a>
         <p class="blog__text">@@text</p>
     </article>
 </li>
+

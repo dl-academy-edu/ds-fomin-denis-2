@@ -20,4 +20,7 @@
     &:disabled {
         background: $button-disabled;
     }
+    @media (max-width: 768px) {
+        @include font-size(14px,19px,bold);
+    }
 }

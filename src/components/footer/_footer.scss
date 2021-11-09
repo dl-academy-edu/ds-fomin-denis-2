@@ -1,20 +1,49 @@
 .footer {
     background: $dark-gray;
     margin: 0 auto;
+    width: 100%;
     &__main {
         display: flex;
         justify-content: space-between;
         margin-bottom: 13px;
+        @media (max-width: 768px) {
+            margin-bottom: 25px;
+        }
+        @media (max-width: 635px) {
+            flex-direction: column;
+        }
         &_wrapper {
+            max-width: 380px;
+            width: 100%;
             margin-top: 100px;
+            @media (max-width: 768px) {
+                max-width: 203px;
+                width: 100%;
+                margin-top: 80px;
+            }
+            @media (max-width: 635px) {
+                max-width: 600px;
+                width: 100%;
+                margin: 0 auto;
+            }
         }
     }
     &__title {
         color: $dark-smoke;
-        margin-bottom: 23px;
+        &:after {
+            content: '';
+            display: block;
+            height: 1px;
+            background-color: $deep-smoke;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
     }
     &__item {
         margin-bottom: 15px;
+        @media (max-width: 540px) {
+            @include font-size(14px,19px,normal);
+        }
     }
     &__link {
         color: $white;
@@ -27,18 +56,17 @@
         }
     }
     &__nav {
-        &:before {
-            content: '';
-            display: block;
-            height: 1px;
-            background-color: $deep-smoke;
-            width: 380px;
-            margin-bottom: 28px;
+        @media (max-width: 540px) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-height: 110px;
         }
     }
     &__subscribe {
         display: flex;
-        width: 380px;
+        max-width: 380px;
+        width: 100%;
         height: 40px;
         background: $deep-smoke;
         margin-bottom: 25px;
@@ -47,7 +75,8 @@
         font-size: 16px;
         line-height: 22px;
         color: #EBEBEB;
-        width: 300px;
+        max-width: 304px;
+        width: 100%;
         height: 40px;
         background-color: $deep-smoke;
         padding: 0 0 0 15px;
@@ -68,23 +97,57 @@
     &__bottom {
         padding-bottom: 100px;
         color: $white;
+        @media (max-width: 635px) {
+            padding: 0 15px 70px 15px;
+            margin: 0 auto;
+        }
         &:before {
             content: '';
             display: block;
             height: 1px;
             background-color: $deep-smoke;
-            width: 1180px;
+            max-width: 1180px;
+            width: 100%;
             margin-bottom: 23px;
         }
     }
     &__wrapper {
         display: flex;
         align-items: center;
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: 540px) {
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+    }
+    &__company-rating {
+        display: flex;
+        @media (max-width: 768px) {
+            margin-bottom: 15px;
+        }
+        @media (max-width: 425px) {
+            margin-bottom: 15px;
+        }
+    }
+    &__info {
+        display: flex;
+        @media (max-width: 768px) {
+            align-items: center;
+            width: 100%;
+        }
+        @media (max-width: 635px) {
+            flex-direction: column;
+        }
     }
     &__text {
         margin: 0;
         margin-right: 25px;
         transition: color $transition;
+        @media (max-width: 768px) {
+            margin-right: 19px;
+        }
         &:hover {
             color: $gold;
         }
@@ -94,18 +157,35 @@
     }
     &__rating {
         display: flex;
+        flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
-        margin-right: 167px;
+        margin-right: 150px;
+        @media (max-width: 1200px) {
+            margin-right: 125px;
+        }
+        @media (max-width: 1024px) {
+            margin-right: 96px;
+        }
+        @media (max-width: 635px) {
+            margin-right: 85px;
+        }
         &_input {
             display: none;
         }
         &_label {
             width: 17px;
             height: 16px;
+            margin-right: 3px;
             background-image: url(../../static/images/star/Star.svg);
             background-repeat: no-repeat;
-            &:hover {
+            &:hover{
+                width: 17px;
+                height: 16px;
+                background-image: url(../../static/images/star/Star-hover.svg);
+                background-repeat: no-repeat;
+            }
+            &:hover ~ .footer__rating_label  {
                 width: 17px;
                 height: 16px;
                 background-image: url(../../static/images/star/Star-hover.svg);
@@ -122,6 +202,14 @@
     &__license {
         margin: 0;
         margin-right: 109px;
+        @media (max-width: 768px) {
+            width: 50%;
+            margin: 0;
+        }
+        @media (max-width: 635px) {
+            width: 100%;
+            margin-bottom: 15px;
+        }
     }
     &__production {
         color: #A2A2A2;
@@ -135,11 +223,37 @@
             text-decoration-line: underline;
             color: $white;
         }
+        @media (max-width: 768px) {
+            width: 50%;
+        }
+        @media (max-width: 635px) {
+            width: 100%;
+        }
     }
 }
-
+.wrapper {
+    &__navigation {
+        @media (max-width: 425px) {
+            margin-top: 70px;
+        }
+    }
+    &__information {
+        @media (max-width: 425px) {
+            margin-top: 40px;
+        }
+    }
+    &__connect {
+        @media (max-width: 425px) {
+            margin-top: 60px;
+            margin-bottom: 25px;
+        }
+    }
+}
 .social {
     display: flex;
+    @media (max-width: 425px) {
+        margin-bottom: 60px;
+    }
     &__item {
         margin-right: 10px;
         transition: opacity $transition;

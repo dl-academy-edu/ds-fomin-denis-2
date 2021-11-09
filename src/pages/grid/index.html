@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../static/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    @@include('header/index.html')
+    <main>
+        <section class="scene container">
+            <h1 class="scene__title">Grid</h1>
+            @@include('breadcrumb/index.html', {
+                "class-link":" ",
+                "text-link":" ",
+                "class-img":"hidden",
+                "text":"Grid"
+            })
+        </section>
+        <section class="container-grid">
+            <div class="grid">
+                <div class="grid__box grid__box_1 grid__content-1">
+                    <div class="grid__content-1_text">
+                        <span class="grid__content-1_title">IPhone 6S</span>
+                        <span class="grid__content-1_description">3D Touch. 12MP photos. 4K video. One powerful phone</span>
+                        <span class="grid__content-1_link" href="#">Learn more or visit an Apple Store today</span>
+                    </div>
+                    <picture class="grid__content-1_img">
+                        <source srcset="../../static/images/grid/smartfon-mobile.png, ../../static/images/grid/smartfon-mobile-2x.png 2x" media="(max-width: 767px)">
+                        <source srcset="../../static/images/grid/smartfon.png, ../../static/images/grid/smartfon-2x.png">
+                        <img src="../../static/images/grid/smartfon.png" alt="iphone 6s">
+                    </picture>
+                </div>
+                <div class="grid__box grid__box_2 grid__content-2">
+                    <div class="grid__content-2_text">
+                        <a class="grid__content-2_link" href="#">Learn More</a>
+                        <span class="grid__content-2_title">How to Use Rotary Evaporator in Chemical Labs</span>
+                        <a class="grid__content-2_download" href="#">Download now</a>
+                    </div>
+                </div>
+                <div class="grid__box grid__box_3 grid__content-3">
+                    <picture class="grid__content-3_img">
+                        <source srcset="../../static/images/grid/keyboard.png, ../../static/images/grid/keyboard2x.png 2x">
+                        <img src="../../static/images/grid/keyboard.png" alt="keyboard">
+                    </picture>
+                    <div class="grid__content-3_text">
+                        <span class="grid__content-3_title">Our Brand New Keyboard</span>
+                        <a class="grid__content-3_link" href="#">Learn ›</a>
+                    </div>
+                </div>
+                <div class="grid__box grid__box_4 grid__content-4">
+                    <div class="grid__content-4_block-1">
+                        <span class="grid__content-4_title">IMac.Retina</span>
+                        <span class="grid__content-4_text">Hardly a month passes these days where</span>
+                    </div>
+                    <picture>
+                        <source srcset="../../static/images/grid/imac-mobile.jpg, ../../static/images/grid/imac-mobile-2x.jpg 2x" media="(max-width: 767px)">
+                        <source srcset="../../static/images/grid/imac-tablet.jpg, ../../static/images/grid/imac-tablet-2x.jpg 2x" media="(max-width: 1200px)">
+                        <source srcset="../../static/images/grid/imac.jpg, ../../static/images/grid/imac-2x.jpg 2x">
+                        <img src="../../static/images/grid/imac.jpg" alt="keyboard">
+                    </picture>
+                    
+                    <div class="grid__content-4_block-2">
+                        <span class="grid__content-4_description">Apple may be experimenting in the virtual reality space. The company has been granted a patent for a head-mounted virtual reality device that would use the iPhone screen as the display.</span>
+                        <a class="grid__content-4_link" href="#">Download Now ›</a>
+                    </div>
+                    
+                </div>
+                <div class="grid__box grid__box_5 grid__content-5">
+                    <div class="grid__content-5_wrapper">
+                        <button class="button-violet"><span class="button-violet_text">Popular</span></button>
+                        <img src="../../static/images/grid/floppy.png" alt="floppy">
+                        <span class="grid__content-5_meet">Meet</span>
+                    </div>
+                    <div class="grid__content-5_text">
+                        <span class="grid__content-5_title">iCloud</span>
+                        <span class="grid__content-5_description">With iCloud, you always have the latest versions of your most important things — like documents, apps, notes, and contacts — on whatever device you’re using.</span>
+                        <button class="button-yellow"><span class="button-yellow_text">Learn More</span></button>
+                    </div>
+                </div>
+                <div class="grid__box grid__box_6 grid__content-6">
+                    <div class="grid__content-6_wrapper">Best Choise</div>
+                    <span class="grid__content-6_title">Much MuchBetter Experience</span>
+                    <picture class="grid__content-6_img">
+                        <source srcset="../../static/images/grid/tablet-mobile.png, ../../static/images/grid/tablet-mobile-2x.png 2x" media="(max-width: 767px)">
+                        <source srcset="../../static/images/grid/tablet-tablet.png, ../../static/images/grid/tablet-tablet2x.png 2x" media="(max-width: 1200px)">
+                        <source srcset="../../static/images/grid/tablet.png, ../../static/images/grid/tablet2x.png 2x">
+                        <img src="../../static/images/grid/tablet.png" alt="keyboard">
+                    </picture>
+                </div>
+                <div class="grid__box grid__box_7 grid__content-7">
+                    <picture class="grid__content-7_img">
+                        <source srcset="../../static/images/grid/gamepad.png, ../../static/images/grid/gamepad-2x.png 2x">
+                        <img src="../../static/images/grid/gamepad.png" alt="gamepad">
+                    </picture>
+                    <span class="grid__content-7_title">Games ourpasion</span>
+                    <a class="grid__content-7_link" href="#">Learn ›</a>
+                </div>
+                <div class="grid__box grid__box_8 grid__content-8">
+                    <img class="grid__content-8_img" src="../../static/images/grid/instagram-icon.svg" alt="instagram">
+                    <a class="grid__content-8_link" href="#">Follow me ›</a>
+                </div>
+                <div class="grid__box grid__box_9 grid__content-9">
+                    <picture class="grid__content-9_img">
+                        <source srcset="../../static/images/grid/tv-mobile.png, ../../static/images/grid/tv-mobile-2x.png 2x" media="(max-width: 767px)">
+                        <source srcset="../../static/images/grid/tv.png, ../../static/images/grid/tv-2x.png 2x">
+                        <img src="../../static/images/grid/tv.png" alt="keyboard">
+                    </picture>
+                    
+                    <span class="grid__content-9_text">More than just a display,  it’s a vision</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('footer/index.html')
+    <script src="scripts.js"></script>
+</body>
+</html>

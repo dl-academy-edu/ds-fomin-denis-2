@@ -1,5 +1,11 @@
 <li class="catalog__item">
-    <a class="catalog__img" href="@@href"><img src="@@img" alt="@@alt" width="@@width" height="@@height">
+    <a href="@@href">
+        <picture class="catalog__img">
+            <source srcset="@@img-mobile, @@img-mobile-2x 2x" media="(max-width: 425px)">
+            <source srcset="@@img-tablet, @@img-tablet-2x 2x" media="(max-width: 1024px)">
+            <source srcset="@@img, @@img-2x 2x">
+            <img src="@@img" alt="@@alt">
+        </picture>
         <div class="learn-more">
             <p class="learn-more__text">@@text</p>
         </div>

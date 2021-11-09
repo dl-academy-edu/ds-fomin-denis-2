@@ -43,7 +43,7 @@
         top: 40%;
         left: 25.3%;
         transform: rotate(0deg);
-        transform-origin: 90px 150px;
+        transform-origin: 90% 150%;
     }
 }
 
@@ -121,47 +121,73 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 71px;
-    width: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
     &__sky {
-        width: 100%;
+        max-width: 100vw;
     }
     &__city {
-        width: 100%;
+        max-width: 100vw;
     }
     &__lantern {
         position: absolute;
         top: 22%;
         left: 35%;
         z-index: 2;
+        max-width: 151px;
+        width: 10vw;
+        max-height: 388px;
+        height: 27vw;
         &_two {
             position: absolute;
             top: 22%;
             left: 93%;
             z-index: 2;
+            max-width: 151px;
+            width: 10vw;
+            max-height: 388px;
+            height: 27vw;
         }
         &_three {
             position: absolute;
             top: 20%;
             left: 75%;
             z-index: 4;
+            max-width: 214px;
+            width: 10vw;
+            max-height: 552px;
+            height: 37vw;
+            
         }
     }
     &__suitcases {
         position: absolute;
         top: 82.5%;
         left: 17%;
-        z-index: 4;
+        z-index: 5;
+        max-width: 191px;
+        width: 12vw;
+        max-height: 95px;
+        height: 6vw;
     }
     &__woman {
         position: absolute;
-        top: 60%;
+        top: 62%;
         left: 18%;
         z-index: 4;
+        max-width: 98px;
+        width: 6vw;
+        max-height: 267px;
+        height: 16vw;
         &_arm {
             position: absolute;
             top: 74.6%;
             left: 20%;
             z-index: 4;
+            max-width: 63px;
+            width: 4vw;
+            max-height: 44px;
+            height: 4vw;
             animation: woman-arm 5s ease 1s;
         }
     }
@@ -170,11 +196,19 @@
         top: 43%;
         left: 25%;
         z-index: 4;
+        max-width: 205px;
+        width: 12vw;
+        max-height: 352px;
+        height: 22vw;
         &_arm {
             position: absolute;
             top: 55%;
             left: 23.3%;
             z-index: 3;
+            max-width: 73px;
+            width: 5vw;
+            max-height: 107px;
+            height: 7vw;
             transform: rotate(160deg);
             animation: man-arm 6s ease 7s;          
         }
@@ -184,12 +218,20 @@
         top: 57%;
         left: 2%;
         z-index: 1;
+        max-width: 250px;
+        max-height: 99px;
+        width: 15vw;
+        height: 6vw;
         animation: car1 10s linear infinite;
         &_two {
             position: absolute;
             top: 57%;
             left: 28%;
             z-index: 1;
+            max-width: 203px;
+            max-height: 96px;
+            width: 13vw;
+            height: 6vw;
             animation: car2 7s linear infinite;
         }
         &_three {
@@ -197,6 +239,10 @@
             top: 60%;
             left: 50%;
             z-index: 0;
+            max-width: 246px;
+            max-height: 65px;
+            width: 15vw;
+            height: 4vw;
             animation: car3 5s linear infinite;
         }
         &_four {
@@ -204,6 +250,10 @@
             top: 53%;
             left: 86%;
             z-index: 0;
+            max-width: 268px;
+            max-height: 126px;
+            width: 16vw;
+            height: 8vw;
             animation: car4 6s linear infinite;
         }
     }
@@ -212,6 +262,10 @@
         top: 54%;
         left: 100%;
         z-index: 3;
+        max-width: 886px;
+        width: 50vw;
+        max-height: 266px;
+        height: 16vw;
         animation: taxi 21s 4s;
     }
     &__message {
@@ -220,6 +274,8 @@
             top: 47%;
             left: 12.5%;
             opacity: 0;
+            max-width: 167px;
+            width: 10vw;
             animation: message 5s 1s;
         }
         &_man {
@@ -227,6 +283,8 @@
             top: 32%;
             left: 24%;
             opacity: 0;
+            max-width: 167px;
+            width: 10vw;
             animation: message 5s 7s;
         }
         &_man-two {
@@ -234,6 +292,8 @@
             top: 31%;
             left: 24%;
             opacity: 0;
+            max-width: 167px;
+            width: 10vw;
             animation: message 5s 16s;
         }
         &_taxi {
@@ -242,6 +302,8 @@
             left: 65%;
             opacity: 0;
             z-index: 3;
+            max-width: 167px;
+            width: 10vw;
             animation: message 2s 13s;
         }
     }

@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../static/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     @@include('header/index.html')
     <main>
-        <section class="container">
-            <h1 class="title">Toy for kids</h1>
+        <section class="container toys__mobile">
+            <h2 class="title toys__mobile_hidden">Toy for kids</h2>
+            <h2 class="title toys__mobile_title">Category Products</h2>
             @@include('breadcrumb/index.html', {
                 "class-link":"breadcrumb__link",
                 "text-link":"Catalog",
@@ -97,60 +99,78 @@
             <ul class="catalog__list dots_none">
                 @@include('catalog/index.html', {
                     "href":"#",
+                    "img-mobile":"../../static/images/catalog/catalog1-mobile.png",
+                    "img-mobile-2x":"../../static/images/catalog/catalog1-mobile-2x.png",
+                    "img-tablet":"../../static/images/catalog/catalog1-tablet.png",
+                    "img-tablet-2x":"../../static/images/catalog/catalog1-tablet-2x.png",
                     "img":"../../static/images/catalog/catalog1.png",
+                    "img-2x":"../../static/images/catalog/catalog1-2x.png",
                     "alt":"Sharky Bag",
-                    "width":"380",
-                    "height":"385",
                     "text":"Learn More",
                     "title":"Sharky Bean Bag Chair Cover",
                     "price":"$60.00 USD"
                 })
                 @@include('catalog/index.html', {
                     "href":"#",
+                    "img-mobile":"../../static/images/catalog/catalog2-mobile.png",
+                    "img-mobile-2x":"../../static/images/catalog/catalog2-mobile-2x.png",
+                    "img-tablet":"../../static/images/catalog/catalog2-tablet.png",
+                    "img-tablet-2x":"../../static/images/catalog/catalog2-tablet-2x.png",
                     "img":"../../static/images/catalog/catalog2.png",
+                    "img-2x":"../../static/images/catalog/catalog2-2x.png",
                     "alt":"Brass Frames",
-                    "width":"380",
-                    "height":"385",
                     "text":"Learn More",
                     "title":"Brass Deco Frames",
                     "price":"$66.00 USD"
                 })
                 @@include('catalog/index.html', {
                     "href":"#",
+                    "img-mobile":"../../static/images/catalog/catalog3-mobile.png",
+                    "img-mobile-2x":"../../static/images/catalog/catalog3-mobile-2x.png",
+                    "img-tablet":"../../static/images/catalog/catalog3-tablet.png",
+                    "img-tablet-2x":"../../static/images/catalog/catalog3-tablet-2x.png",
                     "img":"../../static/images/catalog/catalog3.png",
+                    "img-2x":"../../static/images/catalog/catalog3-2x.png",
                     "alt":"Apron",
-                    "width":"380",
-                    "height":"385",
                     "text":"Learn More",
                     "title":"Cibo Full Apron",
                     "price":"$60.00 USD"
                 })
                 @@include('catalog/index.html', {
                     "href":"#",
+                    "img-mobile":"../../static/images/catalog/catalog4-mobile.png",
+                    "img-mobile-2x":"../../static/images/catalog/catalog4-mobile-2x.png",
+                    "img-tablet":"../../static/images/catalog/catalog4-tablet.png",
+                    "img-tablet-2x":"../../static/images/catalog/catalog4-tablet-2x.png",
                     "img":"../../static/images/catalog/catalog4.png",
+                    "img-2x":"../../static/images/catalog/catalog4-2x.png",
                     "alt":"Gumball Machine",
-                    "width":"380",
-                    "height":"385",
                     "text":"Learn More",
                     "title":"Gatcha Gatcha Gumball Machine",
                     "price":"$56.00 USD"
                 })
                 @@include('catalog/index.html', {
                     "href":"#",
+                    "img-mobile":"../../static/images/catalog/catalog5-mobile.png",
+                    "img-mobile-2x":"../../static/images/catalog/catalog5-mobile-2x.png",
+                    "img-tablet":"../../static/images/catalog/catalog5-tablet.png",
+                    "img-tablet-2x":"../../static/images/catalog/catalog5-tablet-2x.png",
                     "img":"../../static/images/catalog/catalog5.png",
+                    "img-2x":"../../static/images/catalog/catalog5-2x.png",
                     "alt":"Christmas Candle",
-                    "width":"380",
-                    "height":"385",
                     "text":"Learn More",
                     "title":"Christmas Advent Scented Candle",
                     "price":"$29.00 USD"
                 })
                 @@include('catalog/index.html', {
                     "href":"#",
+                    "img-mobile":"../../static/images/catalog/catalog6-mobile.png",
+                    "img-mobile-2x":"../../static/images/catalog/catalog6-mobile-2x.png",
+                    "img-tablet":"../../static/images/catalog/catalog6-tablet.png",
+                    "img-tablet-2x":"../../static/images/catalog/catalog6-tablet-2x.png",
                     "img":"../../static/images/catalog/catalog6.png",
+                    "img-2x":"../../static/images/catalog/catalog6-2x.png",
                     "alt":"Tea Light",
-                    "width":"380",
-                    "height":"382",
                     "text":"Learn More",
                     "title":"Tangle Spinning Tea Light",
                     "price":"$56.00 USD"
@@ -160,5 +180,6 @@
         </section>
     </main>
     @@include('footer/index.html')
+<script src="scripts.js"></script>
 </body>
 </html>

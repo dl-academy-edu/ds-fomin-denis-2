@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../static/images/favicon.ico" type="image/x-icon">
 </head>
-  <body>
+<body>
     @@include('header/index.html')
     <main class="container">
         <section>
@@ -25,42 +26,72 @@
             <h2 class="hidden">Blog</h2>
             <ul class="blog__list dots_none">
                 @@include('blog/index.html', {
+                    "img-mobile":"../../static/images/blog/blog1-mobile.jpg",
+                    "img-mobile-2x":"../../static/images/blog/blog1-mobile-2x.jpg",
+                    "img-tablet":"../../static/images/blog/blog1-tablet.jpg",
+                    "img-tablet-2x":"../../static/images/blog/blog1-tablet-2x.jpg",
                     "img":"../../static/images/blog/blog1.jpg",
+                    "img-2x":"../../static/images/blog/blog1-2x.jpg.jpg",
                     "alt":"Top 5 fastest growing it service companies in philly",
                     "date":"23rd August 2018",
                     "title":"Top 5 fastest growing it service companies in philly",
                     "text":"Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace."
                 })
                 @@include('blog/index.html', {
+                    "img-mobile":"../../static/images/blog/blog2-mobile.jpg",
+                    "img-mobile-2x":"../../static/images/blog/blog2-mobile-2x.jpg",
+                    "img-tablet":"../../static/images/blog/blog2-tablet.jpg",
+                    "img-tablet-2x":"../../static/images/blog/blog2-tablet-2x.jpg",
                     "img":"../../static/images/blog/blog2.jpg",
+                    "img-2x":"../../static/images/blog/blog2-2x.jpg.jpg",
                     "alt":"Best financial",
                     "date":"23rd August 2018",
                     "title":"Best financial",
                     "text":"Direct Line Development is honored to be recognized as one of the Top 100 Fastest Growing Companies 2019 in Philadelphia, according to Growjo’s ranking."
                 })
                 @@include('blog/index.html', {
+                    "img-mobile":"../../static/images/blog/blog3-mobile.jpg",
+                    "img-mobile-2x":"../../static/images/blog/blog3-mobile-2x.jpg",
+                    "img-tablet":"../../static/images/blog/blog3-tablet.jpg",
+                    "img-tablet-2x":"../../static/images/blog/blog3-tablet-2x.jpg",
                     "img":"../../static/images/blog/blog3.jpg",
+                    "img-2x":"../../static/images/blog/blog3-2x.jpg.jpg",
                     "alt":"Company logo or brand identity: which one is more important? brand identity",
                     "date":"23rd August 2018",
                     "title":"Company logo or brand identity: which one is more important? brand identity",
                     "text":"To survive in the world of digital marketing, you need to keep up with the latest SEO trends. Here are our simple, but effective, SEO tips for small business success."
                 })
                 @@include('blog/index.html', {
+                    "img-mobile":"../../static/images/blog/blog4-mobile.jpg",
+                    "img-mobile-2x":"../../static/images/blog/blog4-mobile-2x.jpg",
+                    "img-tablet":"../../static/images/blog/blog4-tablet.jpg",
+                    "img-tablet-2x":"../../static/images/blog/blog4-tablet-2x.jpg",
                     "img":"../../static/images/blog/blog4.jpg",
+                    "img-2x":"../../static/images/blog/blog4-2x.jpg.jpg",
                     "alt":"Best financial",
                     "date":"23rd August 2018",
                     "title":"Best financial",
                     "text":"Direct Line Development is honored to be recognized as one of the Top 100 Fastest Growing Companies 2019 in Philadelphia, according to Growjo’s ranking."
                 })
                 @@include('blog/index.html', {
+                    "img-mobile":"../../static/images/blog/blog5-mobile.jpg",
+                    "img-mobile-2x":"../../static/images/blog/blog5-mobile-2x.jpg",
+                    "img-tablet":"../../static/images/blog/blog5-tablet.jpg",
+                    "img-tablet-2x":"../../static/images/blog/blog5-tablet-2x.jpg",
                     "img":"../../static/images/blog/blog5.jpg",
+                    "img-2x":"../../static/images/blog/blog5-2x.jpg.jpg",
                     "alt":"Company logo or brand identity: which one is more important? brand identity",
                     "date":"23rd August 2018",
                     "title":"Company logo or brand identity: which one is more important? brand identity",
                     "text":"To survive in the world of digital marketing, you need to keep up with the latest SEO trends. Here are our simple, but effective, SEO tips for small business success."
                 })
                 @@include('blog/index.html', {
+                    "img-mobile":"../../static/images/blog/blog6-mobile.jpg",
+                    "img-mobile-2x":"../../static/images/blog/blog6-mobile-2x.jpg",
+                    "img-tablet":"../../static/images/blog/blog6-tablet.jpg",
+                    "img-tablet-2x":"../../static/images/blog/blog6-tablet-2x.jpg",
                     "img":"../../static/images/blog/blog6.jpg",
+                    "img-2x":"../../static/images/blog/blog6-2x.jpg.jpg",
                     "alt":"Top 5 fastest growing it service companies in philly",
                     "date":"23rd August 2018",
                     "title":"Top 5 fastest growing it service companies in philly",
@@ -71,5 +102,6 @@
         </section>
     </main>
     @@include('footer/index.html')
-  </body>
+<script src="scripts.js"></script>
+</body>
 </html>
